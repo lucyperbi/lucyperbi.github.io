@@ -1,0 +1,3531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Loving Memory - Rev. Mrs. Lucy Perbi-Nyarko</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --primary-color: #7D5A50; 
+            --accent-color: #E5B299;   
+            --secondary-color: #FCDEC0; 
+            --text-color: #4A3933;    
+            --light-text: #FFF9F3;     
+            --background-color: #FDF7F2;
+            --footer-color: #4A3933;  
+            --program-bg: #FFF9F3;    
+            --program-border: #E5B299; 
+            --gold: #D4AF37;          
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-family: 'Lora', serif;
+            font-size: 16px;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('a.jpg') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--light-text);
+            padding: 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+            z-index: 1;
+        }
+        
+        .hero-text {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+        
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            padding: 0;
+        }
+        
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            color: var(--light-text) !important;
+            font-weight: 600;
+            font-size: 1.25rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .navbar {
+            background-color: rgba(77, 58, 51, 0.9);
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-nav {
+            margin-left: auto;
+        }
+        
+        .nav-link {
+            color: var(--light-text) !important;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 8px 16px !important;
+            margin: 0 4px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-link:hover, .nav-link:focus, .nav-link.active {
+            background-color: var(--accent-color);
+            color: var(--text-color) !important;
+        }
+        
+        .navbar-toggler {
+            border: none;
+            color: var(--light-text) !important;
+            padding: 5px 10px;
+            font-size: 1.25rem;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+            outline: none;
+        }
+        
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 249, 243, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        }
+        
+        .navbar-collapse {
+            background-color: rgba(77, 58, 51, 0.95);
+        }
+        
+        @media (max-width: 992px) {
+            .navbar-collapse {
+                padding: 1rem;
+                border-radius: 0 0 15px 15px;
+                margin-top: 10px;
+            }
+            
+            .nav-item {
+                text-align: center;
+                margin: 5px 0;
+            }
+        }
+        
+        .hero-text h1 {
+            font-size: 4.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+            letter-spacing: 1px;
+        }
+        
+        .hero-text p {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        .dates {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            font-style: italic;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 34px;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        section {
+            padding: 100px 20px;
+            position: relative;
+        }
+        
+        section:nth-child(odd)::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('b.jpg') center/cover no-repeat fixed;
+            opacity: 0.05;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--primary-color);
+            position: relative;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+            margin: 18px auto;
+        }
+        
+        .ornament {
+            display: block;
+            text-align: center;
+            color: var(--gold);
+            font-size: 1.8rem;
+            margin: 15px 0;
+        }
+        
+        .program {
+            background-color: var(--program-bg);
+            border: none;
+            border-radius: 15px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .program::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(to right, var(--accent-color), var(--gold));
+        }
+        
+        .program-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(229, 178, 153, 0.3);
+            position: relative;
+        }
+        
+        .program-header::after {
+            content: '✤';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--program-bg);
+            padding: 0 20px;
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+        
+        .program-header h3 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            letter-spacing: 0.5px;
+        }
+        
+        .program-header p {
+            font-style: italic;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+        
+        .program-item {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .program-item::before {
+            content: '❦';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-size: 0.9rem;
+        }
+        
+        .program-item span {
+            font-weight: 600;
+            min-width: 180px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+        }
+        
+        .program-item p {
+            font-family: 'Lora', serif;
+            opacity: 0.9;
+        }
+        
+        /* Gallery Styling */
+        .gallery-controls {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            z-index: 10;
+            padding: 0 5%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .gallery-control {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            pointer-events: auto;
+        }
+
+        .gallery-control:hover {
+            background-color: var(--accent-color);
+            color: var(--light-text);
+            transform: scale(1.1);
+        }
+
+        .gallery-carousel {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background-color: var(--program-bg);
+        }
+
+        .gallery-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .gallery-slide {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-slide:hover img {
+            transform: scale(1.02);
+        }
+
+        .gallery-thumbnails {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 0 15px;
+        }
+
+        .gallery-thumbnail {
+            width: 80px;
+            height: 60px;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--program-bg);
+        }
+
+        .gallery-thumbnail.active {
+            border-color: var(--accent-color);
+            opacity: 1;
+        }
+
+        .gallery-thumbnail:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        .gallery-thumbnail img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Lightbox Styling */
+        .gallery-lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            color: var(--light-text);
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            color: var(--accent-color);
+            transform: rotate(90deg);
+        }
+
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--light-text);
+            font-size: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            background: rgba(229, 178, 153, 0.5);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .lightbox-image-container {
+            width: 90%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #lightboxImage {
+            max-width: 90%;
+            max-height: 90%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            transform: scale(0.9);
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        #lightboxImage.loaded {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: var(--light-text);
+            padding: 10px;
+            font-size: 1.2rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .gallery-carousel {
+                height: 350px;
+            }
+            
+            .gallery-thumbnail {
+                width: 60px;
+                height: 45px;
+            }
+            
+            .gallery-control {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .lightbox-prev,
+            .lightbox-next {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-carousel {
+                height: 300px;
+            }
+            
+            .gallery-thumbnails {
+                gap: 5px;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 10px;
+                justify-content: flex-start;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: thin;
+            }
+            
+            .gallery-thumbnail {
+                width: 50px;
+                height: 40px;
+                flex: 0 0 auto;
+            }
+            
+            /* Scrollbar styling for thumbnails */
+            .gallery-thumbnails::-webkit-scrollbar {
+                height: 5px;
+            }
+            
+            .gallery-thumbnails::-webkit-scrollbar-track {
+                background: var(--program-bg);
+                border-radius: 10px;
+            }
+            
+            .gallery-thumbnails::-webkit-scrollbar-thumb {
+                background: var(--accent-color);
+                border-radius: 10px;
+            }
+        }
+        /* Gallery Styling */
+        .gallery-controls {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            z-index: 10;
+            padding: 0 5%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .gallery-control {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            pointer-events: auto;
+        }
+
+        .gallery-control:hover {
+            background-color: var(--accent-color);
+            color: var(--light-text);
+            transform: scale(1.1);
+        }
+
+        .gallery-carousel {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .gallery-slide {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-slide:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-thumbnails {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .gallery-thumbnail {
+            width: 80px;
+            height: 60px;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+
+        .gallery-thumbnail.active {
+            border-color: var(--accent-color);
+            opacity: 1;
+        }
+
+        .gallery-thumbnail:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        .gallery-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Lightbox Styling */
+        .gallery-lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            color: var(--light-text);
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            color: var(--accent-color);
+            transform: rotate(90deg);
+        }
+
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--light-text);
+            font-size: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            background: rgba(229, 178, 153, 0.5);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .lightbox-image-container {
+            width: 90%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #lightboxImage {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            transform: scale(0.9);
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        #lightboxImage.loaded {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: var(--light-text);
+            padding: 10px;
+            font-size: 1.2rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .gallery-carousel {
+                height: 300px;
+            }
+            
+            .gallery-thumbnail {
+                width: 60px;
+                height: 45px;
+            }
+            
+            .gallery-control {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .lightbox-prev,
+            .lightbox-next {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-carousel {
+                height: 250px;
+            }
+            
+            .gallery-thumbnails {
+                gap: 5px;
+            }
+            
+            .gallery-thumbnail {
+                width: 50px;
+                height: 37px;
+            }
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            height: 320px;
+            position: relative;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+        
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        
+        .about {
+            background-color: var(--light-text);
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 320px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid rgba(229, 178, 153, 0.5);
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: all 0.5s ease;
+        }
+        
+        .about-text {
+            flex: 2;
+            min-width: 320px;
+        }
+        
+        .about-text h3 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .about-text h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .location {
+            background-color: var(--secondary-color);
+            text-align: center;
+            padding-bottom: 120px;
+        }
+        
+        .location-details {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .location-details p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .location i {
+            margin-right: 12px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        .map-container {
+            margin-top: 50px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 5px solid #fff;
+        }
+        
+        footer {
+            background: linear-gradient(rgba(74, 57, 51, 0.95), rgba(74, 57, 51, 0.95)), url('b.jpg') center/cover no-repeat;
+            color: var(--light-text);
+            text-align: center;
+            padding: 70px 20px;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(to right, var(--accent-color), var(--gold));
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .footer-content p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .social-icons {
+            margin: 30px 0;
+        }
+        
+        .social-icons a {
+            color: var(--light-text);
+            font-size: 1.4rem;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(229, 178, 153, 0.2);
+            border-radius: 50%;
+            line-height: 50px;
+        }
+        
+        .social-icons a:hover {
+            color: var(--secondary-color);
+            background-color: rgba(229, 178, 153, 0.4);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            font-size: 0.95rem;
+            opacity: 0.7;
+            letter-spacing: 1px;
+        }
+        
+        /* Scripture styling */
+        .scripture {
+            background-color: var(--light-text);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .scripture::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('a.jpg') center/cover no-repeat fixed;
+            opacity: 0.04;
+            z-index: 0;
+        }
+        
+        .scripture-container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .scripture-card {
+            background-color: var(--program-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--gold);
+        }
+        
+        .scripture-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .scripture-header {
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            padding: 20px;
+            position: relative;
+            color: var(--light-text);
+            text-align: center;
+        }
+        
+        .scripture-header h3 {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .bible-icon {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+        
+        .scripture-content {
+            padding: 30px;
+        }
+        
+        .scripture-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .verse {
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-right: 5px;
+            font-size: 0.9rem;
+            vertical-align: super;
+        }
+        
+        /* Read More Functionality */
+        .read-more-content {
+            overflow: hidden;
+            max-height: 150px;
+            transition: max-height 0.5s ease;
+            position: relative;
+        }
+        
+        .read-more-content.expanded {
+            max-height: 15000px;
+        }
+        
+        .read-more-content:not(.expanded)::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: linear-gradient(transparent, var(--program-bg));
+        }
+        
+        .read-more-toggle {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--primary-color);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 1px solid var(--accent-color);
+            font-size: 0.9rem;
+        }
+        
+        .read-more-toggle:hover {
+            background-color: var(--accent-color);
+            color: var(--light-text);
+        }
+        
+        .read-more-toggle i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        .read-more-toggle.active i {
+            transform: rotate(180deg);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-text h1 {
+                font-size: 3.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .program {
+                padding: 40px 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-text p {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .nav {
+                background-color: rgba(74, 57, 51, 0.95);
+            }
+            
+            .program {
+                padding: 30px 20px;
+            }
+            
+            .program-item {
+                flex-direction: column;
+            }
+            
+            .program-item span {
+                min-width: auto;
+                margin-bottom: 8px;
+            }
+            
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 15px;
+            }
+            
+            .about-image::before {
+                display: none;
+            }
+            
+            .location-details {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero-text p {
+                font-size: 1.3rem;
+            }
+            
+            .dates {
+                font-size: 1.1rem;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .program-header h3 {
+                font-size: 1.6rem;
+            }
+            
+            .social-icons a {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                margin: 0 10px;
+            }
+        }
+        
+        body {
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        
+        body.loaded {
+            opacity: 1;
+        }
+        /* Tributes styling */
+        .tributes {
+            background-color: var(--secondary-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tributes::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('b.jpg') center/cover no-repeat fixed;
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .tribute-card {
+            background-color: var(--program-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .tribute-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            padding: 25px;
+            position: relative;
+            color: var(--light-text);
+            text-align: center;
+        }
+        
+        .tribute-header h3 {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .quote-icon {
+            position: absolute;
+            top: 50%;
+            right: 25px;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            opacity: 0.3;
+        }
+        
+        .tribute-content {
+            padding: 35px;
+            color: var(--text-color);
+        }
+        
+        .featured-quote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            padding: 20px;
+            border-left: 4px solid var(--gold);
+            background-color: rgba(252, 222, 192, 0.2);
+        }
+        
+        .tribute-content h4 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .tribute-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .tribute-signature {
+            font-style: italic;
+            text-align: right;
+            margin-top: 30px;
+            color: var(--primary-color);
+        }
+
+        /* Biography Section Styling */
+        .biography {
+            background-color: var(--light-text);
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .biography::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('b.jpg') center/cover no-repeat fixed;
+            opacity: 0.04;
+            z-index: 0;
+        }
+
+        .biography-container {
+            position: relative;
+            z-index: 1;
+            background-color: var(--program-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .biography-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 40px;
+            background: linear-gradient(to right, rgba(252, 222, 192, 0.2), rgba(252, 222, 192, 0.1));
+            border-bottom: 1px solid rgba(229, 178, 153, 0.3);
+        }
+
+        .biography-image {
+            flex: 0 0 200px;
+            margin-right: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border: 5px solid white;
+        }
+
+        .biography-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: all 0.5s ease;
+        }
+
+        .biography-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .biography-intro {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .biography-intro h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .birth-dates {
+            font-family: 'Lora', serif;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .aka {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        .biography-content {
+            padding: 40px;
+        }
+
+        .biography-content p {
+            font-family: 'Lora', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .biography-milestone {
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(229, 178, 153, 0.3);
+        }
+
+        .biography-milestone h4 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .biography-milestone h4::before {
+            content: '❖';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+
+        .biography-farewell {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(252, 222, 192, 0.15);
+            border-radius: 10px;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .biography-farewell p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .biography-farewell p:last-child {
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        @media (max-width: 992px) {
+            .biography-header {
+                padding: 30px;
+            }
+            
+            .biography-image {
+                flex: 0 0 150px;
+                margin-right: 30px;
+            }
+            
+            .biography-intro h3 {
+                font-size: 1.8rem;
+            }
+            
+            .biography-content {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .biography-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .biography-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .biography-milestone h4 {
+                padding-left: 25px;
+            }
+            
+            .biography-content {
+                padding: 25px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .biography-header {
+                padding: 20px;
+            }
+            
+            .biography-intro h3 {
+                font-size: 1.6rem;
+            }
+            
+            .birth-dates, .aka {
+                font-size: 1rem;
+            }
+            
+            .biography-milestone h4 {
+                font-size: 1.3rem;
+            }
+        }
+        /* Son-in-Law Tribute Styling */
+        .son-in-law-tribute {
+            margin-top: 60px;
+            background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.98));
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .son-in-law-tribute::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-color), var(--gold));
+        }
+
+        .son-in-law-tribute .tribute-header {
+            background: linear-gradient(145deg, #7D5A50, #4A3933);
+            padding: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tribute-header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('b.jpg') center/cover no-repeat;
+            opacity: 0.1;
+            mix-blend-mode: overlay;
+        }
+
+        .son-in-law-tribute .tribute-icon {
+            position: absolute;
+            top: 50%;
+            left: 25px;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: rgba(229, 178, 153, 0.7);
+            z-index: 5;
+        }
+
+        .son-in-law-tribute .quote-icon {
+            position: absolute;
+            top: 50%;
+            right: 25px;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+            opacity: 0.3;
+        }
+
+        .son-in-law-tribute .tribute-header h3 {
+            position: relative;
+            z-index: 10;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .son-in-law-tribute .tribute-content {
+            padding: 40px;
+            position: relative;
+        }
+
+        .son-in-law-intro {
+            font-size: 1.2rem;
+            font-family: 'Lora', serif;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            line-height: 1.8;
+            padding-left: 15px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .first-letter {
+            font-size: 3.5rem;
+            font-family: 'Playfair Display', serif;
+            float: left;
+            line-height: 0.8;
+            margin-right: 8px;
+            color: var(--primary-color);
+        }
+
+        .tribute-paragraphs {
+            font-family: 'Lora', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .tribute-paragraphs p {
+            margin-bottom: 20px;
+        }
+
+        .tribute-memory {
+            background-color: rgba(252, 222, 192, 0.15);
+            padding: 25px 25px 25px 70px;
+            margin: 30px 0;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .memory-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            background-color: rgba(229, 178, 153, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+        }
+
+        .tribute-highlight {
+            margin: 30px 0;
+            padding: 25px;
+            background: linear-gradient(to right, rgba(125, 90, 80, 0.05), rgba(125, 90, 80, 0.02));
+            border-left: 3px solid var(--primary-color);
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--primary-color);
+            font-weight: 500;
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .final-message {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.08), rgba(212, 175, 55, 0.03));
+            border-left-color: var(--gold);
+        }
+
+        .tribute-signature {
+            margin-top: 40px;
+            text-align: right;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            padding-top: 20px;
+            border-top: 1px solid rgba(229, 178, 153, 0.3);
+        }
+
+        .signature-icon {
+            margin-top: 12px;
+            font-size: 1.3rem;
+            color: var(--gold);
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .son-in-law-tribute .tribute-header h3 {
+                font-size: 1.8rem;
+            }
+            
+            .son-in-law-tribute .tribute-icon,
+            .son-in-law-tribute .quote-icon {
+                display: none;
+            }
+            
+            .son-in-law-intro {
+                font-size: 1.1rem;
+            }
+            
+            .first-letter {
+                font-size: 2.8rem;
+            }
+            
+            .tribute-memory {
+                padding: 20px 20px 20px 60px;
+            }
+            
+            .memory-icon {
+                left: 15px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .son-in-law-tribute .tribute-header h3 {
+                font-size: 1.5rem;
+            }
+            
+            .son-in-law-tribute .tribute-content {
+                padding: 25px 20px;
+            }
+            
+            .first-letter {
+                font-size: 2.5rem;
+            }
+            
+            .tribute-memory {
+                padding: 15px 15px 15px 50px;
+            }
+            
+            .memory-icon {
+                width: 25px;
+                height: 25px;
+            }
+            
+            .tribute-highlight {
+                font-size: 1.1rem;
+                padding: 20px 15px;
+            }
+        }
+
+        /* Grandson's Tribute Styling */
+        .grandson-tribute {
+            margin-top: 60px;
+            background-color: var(--program-bg);
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .grandson-tribute::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, #E5B299, #FCDEC0, #E5B299);
+        }
+
+        .grandson-tribute .tribute-header {
+            background: linear-gradient(to right, #7D5A50, #4A3933);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .tribute-header-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px),
+                radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            opacity: 0.3;
+        }
+
+        .grandson-tribute .tribute-header h3 {
+            position: relative;
+            z-index: 2;
+            font-size: 2rem;
+            color: var(--light-text);
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+        }
+
+        .grandson-hearts {
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 3;
+        }
+
+        .grandson-hearts i {
+            color: #E5B299;
+            font-size: 1.2rem;
+        }
+
+        .grandson-hearts i:nth-child(2) {
+            color: #FCDEC0;
+            font-size: 1.5rem;
+        }
+
+        .grandson-hearts i:nth-child(3) {
+            color: #E5B299;
+            font-size: 1.2rem;
+        }
+
+        .grandson-tribute .tribute-content {
+            padding: 40px;
+            position: relative;
+        }
+
+        .grandson-letter {
+            position: relative;
+            background-color: rgba(252, 222, 192, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            font-family: 'Lora', serif;
+        }
+
+        .letter-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .grandson-letter p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-color);
+        }
+
+        .memory-box {
+            background-color: rgba(252, 222, 192, 0.15);
+            padding: 25px 25px 25px 60px;
+            margin: 30px 0;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .memory-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            background-color: rgba(229, 178, 153, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+        }
+
+        .gas-station-memory {
+            background-color: rgba(212, 175, 55, 0.08);
+            padding: 25px;
+            position: relative;
+            border-left: 3px solid var(--gold);
+        }
+
+        .memory-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .scripture-box {
+            background-color: rgba(125, 90, 80, 0.05);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .scripture-icon {
+            flex: 0 0 40px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 5px;
+        }
+
+        .scripture-content {
+            flex: 1;
+        }
+
+        .scripture-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .farewell {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .fly-high {
+            text-align: center;
+            margin: 40px 0 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+        }
+
+        .fly-high p {
+            margin-bottom: 5px;
+        }
+
+        .fly-high-icon {
+            margin-top: 15px;
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            opacity: 0.8;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .grandson-tribute .tribute-signature {
+            margin-top: 30px;
+            text-align: right;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            padding-top: 15px;
+            border-top: 1px dashed rgba(229, 178, 153, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .grandson-tribute .tribute-header h3 {
+                font-size: 1.8rem;
+            }
+            
+            .grandson-letter {
+                padding: 25px 20px;
+            }
+            
+            .memory-box {
+                padding: 20px 20px 20px 50px;
+            }
+            
+            .scripture-box {
+                padding: 20px;
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .scripture-icon {
+                justify-content: flex-start;
+            }
+            
+            .fly-high {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grandson-tribute .tribute-header h3 {
+                font-size: 1.5rem;
+            }
+            
+            .grandson-hearts i {
+                font-size: 1rem;
+            }
+            
+            .grandson-hearts i:nth-child(2) {
+                font-size: 1.2rem;
+            }
+            
+            .grandson-tribute .tribute-content {
+                padding: 30px 20px;
+            }
+            
+            .letter-heading {
+                font-size: 1.3rem;
+            }
+            
+            .memory-box {
+                padding: 20px 15px 20px 45px;
+            }
+            
+            .memory-icon {
+                width: 25px;
+                height: 25px;
+                left: 10px;
+            }
+            
+            .memory-title, .farewell {
+                font-size: 1.1rem;
+            }
+            
+            .fly-high {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Childhood Friend & Colleague Tribute Styling */
+    .friend-tribute {
+        margin-top: 60px;
+        background-color: var(--program-bg);
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        position: relative;
+    }
+    
+    .friend-tribute::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(to right, #FFC107, #D4AF37, #FFC107);
+    }
+    
+    .friend-tribute .tribute-header {
+        background: linear-gradient(to right, #4A3933, #7D5A50);
+        padding: 35px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+    
+    .friend-tribute-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+            linear-gradient(-45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.05) 75%),
+            linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.05) 75%);
+        background-size: 20px 20px;
+        opacity: 0.5;
+    }
+    
+    .friend-tribute .tribute-icon {
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: rgba(229, 178, 153, 0.7);
+        z-index: 5;
+    }
+    
+    .friend-tribute .tribute-header h3 {
+        position: relative;
+        z-index: 2;
+        font-size: 2rem;
+        color: var(--light-text);
+        margin: 0 0 10px 0;
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 1px;
+    }
+    
+    .tribute-relationship {
+        position: relative;
+        z-index: 2;
+        color: var(--secondary-color);
+        margin: 0;
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+    
+    .friend-tribute .tribute-content {
+        padding: 40px;
+        position: relative;
+        background: linear-gradient(to bottom, rgba(252, 222, 192, 0.08), rgba(255, 255, 255, 1));
+    }
+    
+    .friend-tribute-intro {
+        font-family: 'Lora', serif;
+        font-size: 1.15rem;
+        color: var(--primary-color);
+        line-height: 1.8;
+        margin-bottom: 25px;
+        padding-left: 20px;
+        border-left: 3px solid #D4AF37;
+    }
+    
+    .scripture-verse {
+        background-color: rgba(252, 222, 192, 0.15);
+        padding: 25px;
+        margin: 30px 0;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    }
+    
+    .scripture-verse::before,
+    .scripture-verse::after {
+        content: '"';
+        font-family: 'Georgia', serif;
+        font-size: 4rem;
+        color: rgba(212, 175, 55, 0.2);
+        position: absolute;
+        line-height: 0;
+    }
+    
+    .scripture-verse::before {
+        top: 25px;
+        left: 10px;
+    }
+    
+    .scripture-verse::after {
+        bottom: 5px;
+        right: 10px;
+        transform: rotate(180deg);
+    }
+    
+    .verse-quote {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2rem;
+        font-style: italic;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        line-height: the: 1.6;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .verse-reference {
+        font-family: 'Lora', serif;
+        font-size: 0.95rem;
+        color: var(--accent-color);
+    }
+    
+    .friend-tribute p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+        font-size: 1.05rem;
+        color: var(--text-color);
+        font-family: 'Lora', serif;
+    }
+    
+    .tribute-memory-accent {
+        margin: 35px 0;
+        padding: 0 20px;
+        position: relative;
+    }
+    
+    .memory-line {
+        height: 1px;
+        background: linear-gradient(to right, transparent, #D4AF37, transparent);
+        margin: 20px 0;
+    }
+    
+    .tribute-memory-accent p {
+        text-align: center;
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 1.15rem;
+        color: var(--primary-color);
+    }
+    
+    .tribute-qualities {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin: 30px 0;
+    }
+    
+    .tribute-qualities span {
+        background-color: rgba(229, 178, 153, 0.1);
+        padding: 8px 15px;
+        border-radius: 30px;
+        font-family: 'Cormorant Garamond', serif;
+        color: var(--primary-color);
+        font-size: 1rem;
+        border: 1px solid rgba(229, 178, 153, 0.3);
+    }
+    
+    .farewell-container {
+        margin: 40px 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .farewell-ornament {
+        color: var(--gold);
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+    
+    .farewell-message {
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        background-color: rgba(252, 222, 192, 0.15);
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        border: 1px solid rgba(229, 178, 153, 0.2);
+    }
+    
+    .farewell-message p {
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+        color: var(--primary-color);
+    }
+    
+    .farewell-message p:last-child {
+        margin-top: 15px;
+        font-style: italic;
+    }
+    
+    .tribute-signature {
+        margin-top: 40px;
+        text-align: right;
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-color);
+        position: relative;
+    }
+    
+    .signature-line {
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(229, 178, 153, 0.5));
+        margin-bottom: 20px;
+    }
+    
+    .tribute-signature p {
+        margin-bottom: 5px;
+    }
+    
+    .tribute-signature p:first-child {
+        font-style: italic;
+        opacity: 0.8;
+        font-size: 0.95rem;
+    }
+    
+    .signatory {
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+    
+    @media (max-width: 768px) {
+        .friend-tribute .tribute-header h3 {
+            font-size: 1.8rem;
+        }
+        
+        .tribute-relationship {
+            font-size: 1.1rem;
+        }
+        
+        .friend-tribute .tribute-content {
+            padding: 30px 25px;
+        }
+        
+        .friend-tribute-intro {
+            font-size: 1.1rem;
+        }
+        
+        .scripture-verse {
+            padding: 20px;
+        }
+        
+        .verse-quote {
+            font-size: 1.1rem;
+        }
+        
+        .tribute-memory-accent {
+            padding: 0 10px;
+        }
+        
+        .tribute-qualities {
+            gap: 10px;
+        }
+        
+        .tribute-qualities span {
+            padding: 6px 12px;
+            font-size: 0.9rem;
+        }
+        
+        .farewell-message {
+            padding: 20px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .friend-tribute .tribute-header h3 {
+            font-size: 1.5rem;
+        }
+        
+        .friend-tribute .tribute-icon {
+            display: none;
+        }
+        
+        .tribute-relationship {
+            font-size: 1rem;
+        }
+        
+        .friend-tribute .tribute-content {
+            padding: 25px 20px;
+        }
+        
+        .friend-tribute-intro {
+            font-size: 1.05rem;
+            padding-left: 15px;
+        }
+        
+        .scripture-verse {
+            padding: 20px 15px;
+        }
+        
+        .verse-quote {
+            font-size: 1rem;
+        }
+        
+        .scripture-verse::before,
+        .scripture-verse::after {
+            font-size: 3rem;
+        }
+        
+        .tribute-memory-accent p {
+            font-size: 1.05rem;
+        }
+        
+        .tribute-qualities {
+            gap: 8px;
+        }
+        
+        .tribute-qualities span {
+            padding: 5px 10px;
+            font-size: 0.85rem;
+        }
+        
+        .farewell-message p {
+            font-size: 1rem;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top nav" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Rev. Mrs. Lucy Perbi-Nyarko</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#program">Service Program</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#scripture">Scripture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tributes">Tributes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#location">Location</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <div class="hero-text animate__animated animate__fadeIn">
+            <h1>Rev. Mrs. Lucy Perbi-Nyarko</h1>
+            <p>In Loving Memory</p>
+            <div class="dates">A Faithful Servant of God</div>
+            <a href="#program" class="btn">View Memorial Service</a>
+        </div>
+    </header>
+
+    <!-- Program Section -->
+    <section id="program">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Memorial Service Program</h2>
+            <span class="ornament">❧</span>
+            <div class="program" data-aos="fade-up" data-aos-delay="100">
+                <div class="program-header">
+                    <h3>Memorial Service - 12th April 2025</h3>
+                    <p>Christ Church Barnet, St Albans Road, Barnet EN5 4LA</p>
+                    <p>Time: 6:00PM - 9:00PM</p>
+                </div>
+                
+                <div class="program-item" data-aos="fade-up" data-aos-delay="150">
+                    <span>Welcome</span>
+                    <p>Purpose of Gathering</p>
+                </div>
+                
+                <div class="program-item" data-aos="fade-up" data-aos-delay="200">
+                    <span>Opening Prayer</span>
+                    <p></p>
+                </div>
+                
+                <div class="program-item" data-aos="fade-up" data-aos-delay="250">
+                    <span>Songs of Praise</span>
+                    <p></p>
+                </div>
+                
+                <div class="program-item" data-aos="fade-up" data-aos-delay="300">
+                    <span>Introductions</span>
+                    <p>Clergy/Ministers Present</p>
+                </div>
+                
+                <div class="program-item" data-aos="fade-up" data-aos-delay="350">
+                    <span>Bible Reading</span>
+                    <p>1 Thessalonians 4:13-18 (NKJV/NLT)</p>
+                </div>
+                
+                <div class="program-item" data-aos="fade-up" data-aos-delay="400">
+                    <span>Biography</span>
+                    <p></p>
+                </div>
+                
+                <div class="program-item" data-aos="fade-up" data-aos-delay="450">
+                    <span>Tributes</span>
+                    <p>By Family</p>
+                </div>
+                
+                <div class="program-item" data-aos="fade-up" data-aos-delay="500">
+                    <span>Tributes</span>
+                    <p>By Church & Friends</p>
+                </div>
+                
+                <div class="program-item" data-aos="fade-up" data-aos-delay="550">
+                    <span>Song</span>
+                    <p></p>
+                </div>
+                
+                <div class="program-item" data-aos="fade-up" data-aos-delay="600">
+                    <span>Exhortation</span>
+                    <p></p>
+                </div>
+                
+                <div class="program-item" data-aos="fade-up" data-aos-delay="650">
+                    <span>Prayer for Family</span>
+                    <p></p>
+                </div>
+                
+                <div class="program-item" data-aos="fade-up" data-aos-delay="700">
+                    <span>Announcements</span>
+                    <p>& Donation Presentations</p>
+                </div>
+                
+                <div class="program-item" data-aos="fade-up" data-aos-delay="750">
+                    <span>Appreciations</span>
+                    <p></p>
+                </div>
+                
+                <div class="program-item" data-aos="fade-up" data-aos-delay="800">
+                    <span>Closing Prayer</span>
+                    <p>& Blessings</p>
+                </div>
+                
+                <div class="program-item" data-aos="fade-up" data-aos-delay="850">
+                    <span>Refreshments</span>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripture Section -->
+    <section id="scripture" class="scripture">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Scripture Reading</h2>
+            <span class="ornament">❧</span>
+            <div class="scripture-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="scripture-card">
+                            <div class="scripture-header">
+                                <h3>1 Thessalonians 4:13-18 (NKJV)</h3>
+                                <span class="bible-icon"><i class="fas fa-bible"></i></span>
+                            </div>
+                            <div class="scripture-content">
+                                <div class="read-more-content" id="scripture-nkjv">
+                                    <p><span class="verse">13</span> But I do not want you to be ignorant, brethren, concerning those who have fallen asleep, lest you sorrow as others who have no hope.</p>
+                                    <p><span class="verse">14</span> For if we believe that Jesus died and rose again, even so God will bring with Him those who sleep in Jesus.</p>
+                                    <p><span class="verse">15</span> For this we say to you by the word of the Lord, that we who are alive and remain until the coming of the Lord will by no means precede those who are asleep.</p>
+                                    <p><span class="verse">16</span> For the Lord Himself will descend from heaven with a shout, with the voice of an archangel, and with the trumpet of God. And the dead in Christ will rise first.</p>
+                                    <p><span class="verse">17</span> Then we who are alive and remain shall be caught up together with them in the clouds to meet the Lord in the air. And thus we shall always be with the Lord.</p>
+                                    <p><span class="verse">18</span> Therefore comfort one another with these words.</p>
+                                </div>
+                                <span class="read-more-toggle" data-target="scripture-nkjv">
+                                    Read More <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="scripture-card">
+                            <div class="scripture-header">
+                                <h3>1 Thessalonians 4:13-18 (NLT)</h3>
+                                <span class="bible-icon"><i class="fas fa-bible"></i></span>
+                            </div>
+                            <div class="scripture-content">
+                                <div class="read-more-content" id="scripture-nlt">
+                                    <p><span class="verse">13</span> And now, dear brothers and sisters, we want you to know what will happen to the believers who have died so you will not grieve like people who have no hope.</p>
+                                    <p><span class="verse">14</span> For since we believe that Jesus died and was raised to life again, we also believe that when Jesus returns, God will bring back with him the believers who have died.</p>
+                                    <p><span class="verse">15</span> We tell you this directly from the Lord: We who are still living when the Lord returns will not meet him ahead of those who have died.</p>
+                                    <p><span class="verse">16</span> For the Lord himself will come down from heaven with a commanding shout, with the voice of the archangel, and with the trumpet call of God. First, the believers who have died will rise from their graves.</p>
+                                    <p><span class="verse">17</span> Then, together with them, we who are still alive and remain on the earth will be caught up in the clouds to meet the Lord in the air. Then we will be with the Lord forever.</p>
+                                    <p><span class="verse">18</span> So encourage each other with these words.</p>
+                                </div>
+                                <span class="read-more-toggle" data-target="scripture-nlt">
+                                    Read More <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Photo Gallery</h2>
+            <span class="ornament">❧</span>
+            
+            <!-- Gallery Controls -->
+            <div class="gallery-controls">
+                <button class="gallery-control" id="galleryPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="gallery-control" id="galleryNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <!-- Main Gallery Carousel -->
+            <div class="gallery-carousel" id="galleryCarousel">
+                <div class="gallery-track" id="galleryTrack">
+                    <!-- Images will be loaded here by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Thumbnail Navigation -->
+            <div class="gallery-thumbnails" id="galleryThumbnails">
+                <!-- Thumbnails will be loaded here by JavaScript -->
+            </div>
+            
+            <!-- Lightbox -->
+            <div class="gallery-lightbox" id="galleryLightbox">
+                <div class="lightbox-content">
+                    <button class="lightbox-close" id="lightboxClose">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button class="lightbox-prev" id="lightboxPrev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="lightbox-next" id="lightboxNext">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="lightbox-image-container">
+                        <img src="" alt="" id="lightboxImage">
+                    </div>
+                    <div class="lightbox-caption" id="lightboxCaption"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biography Section -->
+    <section id="about" class="biography">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Biography</h2>
+            <span class="ornament">❧</span>
+            
+            <div class="biography-container" data-aos="fade-up">
+                <div class="biography-header">
+                    <div class="biography-image">
+                        <img src="a.jpg" alt="Rev. Mrs. Lucy Perbi-Nyarko portrait">
+                    </div>
+                    <div class="biography-intro">
+                        <h3>Rev. Mrs. Lucy Perbi Nyarko</h3>
+                        <p class="birth-dates">21st November, 1958 - 2025</p>
+                        <p class="aka">Also Known As: Lucy Osei Afari</p>
+                    </div>
+                </div>
+                
+                <div class="biography-content">
+                    <div class="read-more-content" id="biography-text">
+                        <p>The late Rev. Mrs. Lucy Perbi Nyarko was born on 21st November, 1958 to the late Opanin Kwaku Nyamekye from the Nsoatre Nsesreso family and the late Obaapanin Grace Osei Afari from the Sunyani Gyeduakro family. She started her elementary school at the Nyamaa Basic School in 1964 but completed at the Sunyani Anglican school in 1974. When she was in middle form 3, she passed the Common Entrance examination to go to Ghana Secondary School in Koforidua but her late grandfather Opanin Adolphus Osei Afari who took care of her education declined to send her there due to her petite structure. Unperturbed by that decision, she again sat for the examination when she got to middle form four (F4) and passed to go to Sunyani Secondary School with the ambition to become a medical doctor.</p>
+                        
+                        <p>Unfortunate for her, her grandfather who preferred Technical Education to the Grammar type, decided to send her to the Sunyani Technical Institute (Sunyani Technical University) to do Catering for two years and end up as a Matron. Again, due to her structure the then principal, Mr. F. A. Baiden advised the grandfather to let her do Business which was four years with the hope that her physical structure would improve after the four years.</p>
+                        
+                        <div class="biography-milestone">
+                            <h4>Education Journey</h4>
+                        </div>
+                        
+                        <p>From the Sunyani Technical Institute, she proceeded to Takoradi Polytechnic in 1978 with her two certificate which were obtained concurrently i.e. Royal Society of Arts (RSA) and General Certificate of Education (G. C. E 'O' level) to do her Diploma in Business Studies (DBS) Accounting option and completed in 1981.</p>
+                        
+                        <p>Aided by Mr. Philip Awuah who bought forms and also vacated his room for her at campus, she was encouraged to attend the University of Cape Coast in 1982, to pursue the Bachelor of Commerce (B. Com), Accounting option and graduated with B.Com Hons. Degree and Diploma in Education simultaneously in 1987, due to the one-year University closure by the P. N. D. C Administration.</p>
+                        
+                        <p>After school, she was posted to her Alma Mata, Sunyani Technical Institute to do her National Service, where she taught accounting. Imbued with the Spirit of sacrifice, she at that time, organized special 'A' level Accounting Classes at the Twene Amanfo Secondary School for some students, some of which have graduated in B.Com and are in Administrative positions not forgetting the numerous female students who have completed their Masters, Degrees and Nursing programmes. To her "I cannot do Spirit" was an affront to her dignity and alien to her upbringing.</p>
+                        
+                        <div class="biography-milestone">
+                            <h4>Professional Career</h4>
+                        </div>
+                        
+                        <p>After completing her National Service Programme she was employed at the Ghana Water Company in 1989 as Officer. Impressed by her prowess in accounting she was tasked to assist the audit unit in the Commercial company. In order to keep her and make her feel comfortable, an estate house was bought for her to stay in.</p>
+                        
+                        <p>In 1995, the Volta River Authority (VRA) needed some Finance Officers and so she applied, attended interview and was employed and sent to the Tamale Area office to work as Area Finance officer. She was transferred back to Sunyani as Area Finance Officer and back to Tamale head office and back again to Sunyani still as Area Finance officer. Here in Sunyani, she got the opportunity to act as Area Manager. She later attended an interview for managerial position and she was subsequently promoted to the position of Area Manager breaking the long standing monopolized administrative structure. To be precise, she was the first female to rise to that position. Again, she was the first person from non-engineering background to get to that position thanks to her hard work, tactfulness, dexterity and acumen.</p>
+                        
+                        <div class="biography-milestone">
+                            <h4>Further Education & Community Impact</h4>
+                        </div>
+                        
+                        <p>While in active service, she got the opportunity in 2003 to travel to the United Kingdom to study at Leicester University where she obtained her Master's Degree in Business Administration (Finance option). She formed the VRA Ladies Association and encouraged many cashiers to further their studies some of whom have become finance officers. She organized field trips and excursions for the ladies taking them to places like Burkina Faso and Dubai. Through her instrumentality, some females from poor houses were identified and adopted by the Ladies Association and their educational expenses were catered for by the association.</p>
+                        
+                        <p>From Sunyani, she was transferred to Bolgatanga as Area Manager. Her impact over there, mesmerized the workers and the community to the extent that the Bongo Chief enskinned her as Development Queen of Bongo and given the title Timnalana. She was so dear to them that when she retired in 2018, a convoy was sent to bring her back to Bolgatanga to continue her good works there not to mention the educational opportunities initiated for the youth and the donation of items to the needy and elderly.</p>
+                        
+                        <div class="biography-milestone">
+                            <h4>Family Life</h4>
+                        </div>
+                        
+                        <p>To the family, Rev. Mrs. Lucy Perbi Nyarko was a pivot around which the care and support of her siblings revolved. She was an oasis of strength, direction and financial support a vacuum which will be difficult to fill. She was respectful, co-operative, task oriented, serviceable, frank and out-spoken.</p>
+                        
+                        <p>Back in September 1985, Rev. Mrs. Lucy Perbi Nyarko married to Mr. Crosby Perbi Nyarko. They had plans to celebrate their fortieth (40) year marriage vows this year only to be taken aback by the unexpected news from Accra where she received medical care.</p>
+                        
+                        <div class="biography-milestone">
+                            <h4>Christian Life & Ministry</h4>
+                        </div>
+                        
+                        <p>Madam Lucy's Christian life has been quite chequered, starting at the Methodist Church in her childhood days to the Assemblies of God Church (AG), Calvary Charismatic Centre (C.C.C) and Elim City where she was one of the founding members, culminating in her being ordained as a minister of the gospel in 2016.</p>
+                        
+                        <p>At Elim City, she was a board member, was in charge of church finances, Bible School Teacher (Life in the word), Marriage Counsellor (Family life), women ministry organizer and Pastor in charge of the Twi section (Aseda Congregation).</p>
+                        
+                        <div class="biography-milestone">
+                            <h4>Post-Retirement Activities</h4>
+                        </div>
+                        
+                        <p>After retirement from active service, Rev. Mrs. Lucy Perbi Nyarko continued to offer her skills in support of humanity. She was an executive members of Sunyani Technical Institute Alumni, Regional Executive member of Ghana LPG Operators Association (GLIPGOA) and the National Treasurer. She was also the treasurer of the VRA Retirees Association.</p>
+                        
+                        <div class="biography-farewell">
+                            <p>The entire family, numerous people you have been supporting and those still under the care of the Perbi Nyarko family will forever miss you.</p>
+                            <p>Rest well in the bosom of Abraham. Shalom.</p>
+                            <p>Damire fa due</p>
+                            <p>Due ne Amanehunu. NANTE YIE OOO!</p>
+                        </div>
+                    </div>
+                    
+                    <span class="read-more-toggle" data-target="biography-text">
+                        Read Full Biography <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Tributes Section -->
+    <section id="tributes" class="tributes">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Tributes</h2>
+            <span class="ornament">❧</span>
+            
+
+        <!-- Daughter's Tribute Section -->
+        <div class="tribute-card daughter-tribute" data-aos="fade-up">
+            <div class="tribute-header">
+                <span class="tribute-icon"><i class="fas fa-heart"></i></span>
+                <h3>TRIBUTE BY DAUGHTER</h3>
+                <span class="quote-icon"><i class="fas fa-quote-left"></i></span>
+            </div>
+            <div class="tribute-content">
+                <div class="featured-quote">
+                    <p>"Those who live in the shelter of the Most High will find rest in the shadow of the Almighty." <span class="quote-source">— Psalm 91:1 (NLT)</span></p>
+                </div>
+                
+                <p class="tribute-intro">I want to thank you all for coming to celebrate the life of my mum with us today.</p>
+                
+                <div class="tribute-paragraphs">
+                    <div class="read-more-content" id="tribute-daughter">
+                        <p>Maa, this was your favourite bible verse. You loved the Lord and loved spending time in his presence. Never did you miss a church gathering or anything related to God's work. You raised us on God's word. Each morning at 5:30am without fail, you will come knocking on our doors for morning devotion. You shared testimonies about the countless times in your life the Lord brought angels your way to assist you so you never took God or His things for granted. You influenced us with the desire to pursue a godly life and encouraged us to trust the Lord always.</p>
+                        
+                        <div class="tribute-highlight">
+                            <p>You were a fierce guardian and a gentle guide who always steered us towards growth and improvement.</p>
+                        </div>
+                        
+                        <p>You had a strong belief in our potential and always encouraged us to strive for excellence. You instilled in us a drive to be the best version of ourselves. I remember when I was about to write my BECE, you noticed that I wasn't studying as I should. You sat me down and asked me about my ambitions for life. We had a long chat and you advise me that without studying, I wouldn't be able to achieve those ambitions. That was the turning point for me.</p>
+                        
+                        <p>You always gave us the confidence that we could achieve anything we set our minds to do. You encouraged us to take every opportunity that came our way and make great things out of them. I wouldn't be where I am now if it wasn't for your consistent love and support. You were my biggest cheerleader.</p>
+                        
+                        <p>When I was finishing uni, I discussed with you about my desire to join you in the UK. You did everything possible to make it happen. As soon as I arrived, you got me involved in serving in the church. You recruited me into the accounts team so I can replace you when you leave for Ghana. When it was time to leave after your studies, you cared so much about my wellbeing in a foreign land that you told so many people to look after me.</p>
+                        
+                        <div class="tribute-highlight">
+                            <p>Your love for children was a testament to your endless compassion and desire to nurture and care for them.</p>
+                        </div>
+                        
+                        <p>You extended your love far beyond our small family. Your heart was so vast and so generous, that you never turned any child away. Your home was a haven to many. It was constantly filled with the laughter and chatter of children. Every child who crossed your path felt this warmth and longed to be around you. You gave birth to a few, but you nurtured a multitude and became a mother figure to so many.</p>
+                        
+                        <p>When we visited Ghana in August 2023, it made no sense to me why we all cried when it was time to say goodbye but It does now - It was the last time we were going to see and hug you. If l knew that was the last time, I would have hugged you even more tightly.</p>
+                        
+                        <p>Maa, you've left us too soon. Our hearts desire was for you to live a long life. As I look back at your accomplishments and the lives you have impacted, I can say that you lived your life to the full. I used to say to you that if I am able to achieve even a quarter of your life achievement's, I would consider myself successful. Maa, you have finished the race that was set for you by your maker. It's now time for you to rest beautifully in the shadows of the Almighty. We will strive to make you proud by continuing to build on the foundation you have laid so beautifully.</p>
+                        
+                        <div class="tribute-highlight final-highlight">
+                            <p>You may be gone, Maa but your spirit will forever light our paths and that of all those you empowered.</p>
+                        </div>
+                        
+                        <p>Many children will sing your praises for generations to come. I will miss our long chats especially the ones about your childhood struggles and how you rose above them all. I love you, Maa-more than words can say. You will be deeply missed, but never forgotten. May your beautiful soul rest in perfect peace till we meet again.</p>
+                    </div>
+                    
+                    <span class="read-more-toggle" data-target="tribute-daughter">
+                        Read Full Tribute <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                
+                <div class="tribute-signature">
+                    <p>With eternal love,<br>Hagar</p>
+                    <div class="signature-decoration">❦</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Son-in-Law Tribute -->
+        <div class="tribute-card son-in-law-tribute" data-aos="fade-up">
+            <div class="tribute-header">
+                <div class="tribute-header-overlay"></div>
+                <span class="tribute-icon"><i class="fas fa-user-tie"></i></span>
+                <h3>TRIBUTE BY SON-IN-LAW</h3>
+                <span class="quote-icon"><i class="fas fa-quote-right"></i></span>
+            </div>
+            <div class="tribute-content">
+                <div class="son-in-law-intro">
+                    <p><span class="first-letter">M</span>ama Lucy, as you are affectionately called; I encountered you about 20 years ago when I presented myself and asked to marry your daughter Hagar.</p>
+                </div>
+                
+                <div class="tribute-paragraphs">
+                    <div class="read-more-content" id="tribute-son-in-law">
+                        <p>At the time you had just left London for Ghana so this meeting was not in person. However, I immediately sensed and experienced your dedication to family, pragmatism and the fact that you believed that if something has to be done, it must be done well.</p>
+                        
+                        <p>The subsequent meetings and 'interviews' and background checks with Pastor Gospel, in whose care you had left your daughter, made it clear to me that you wouldn't just accept and take anyone as a son-in-law just for the sake of it. When I finally met you in Accra some months after we got married, I had a confirmation of the thoughts I had about you, and you sealed it with a warm and a gentle welcome.</p>
+                        
+                        <div class="tribute-memory">
+                            <div class="memory-icon"><i class="fas fa-heart"></i></div>
+                            <p>You talked with me as a son, explaining and showing me how to navigate through marriage life. You made me feel at ease and comfortable. At this time my anx and nerves of meeting my mother-in-law the first time fell off. You made me feel like I were your own son and I felt comfortable with you as I would my own mum. From here on our relationship would be better described as mother and son.</p>
+                        </div>
+                        
+                        <p>This encounter with you gave me a practical understanding when my mum, siblings, uncles and other family members tell me that you are a warm-hearted person who treats them exceptionally well and make them feel special anytime they meet with you. Mama Lucy, you cared not only for me but also everyone I cared about.</p>
+                        
+                        <p>When I visited your home in Sunyani, to my surprise, I saw a portrait of myself in your living room. I stood in a careful silent gaze of my portrait to make sure it was really me.</p>
+                        
+                        <p>And you placed it amongst the portraits of people who are dear to your heart. I did make a gracious comment on seeing my portrait but what I did not reveal was how chaffed I was, and how surprised I was with the confidence you had in seeing my photo perhaps several times every day in your home. I thought to myself this lady might have seen something in me that I have probably not seen.</p>
+                        
+                        <div class="tribute-memory">
+                            <div class="memory-icon"><i class="fas fa-home"></i></div>
+                            <p>During our recent visit to Ghana, you left your busy schedule to meet us in Accra, spent some days with us, before accompanying us to Kumasi and then welcoming us to your home in Sunyani. You gave me your own private car to move around with. You introduced me to any family and friends you could find. You practically showed me everywhere I know in Sunyani.</p>
+                        </div>
+                        
+                        <p>One of the many memories of you that has stuck with me is when I got sick in Ghana and couldn't eat, You prepared for me your special potent pepper soup that took away my flu and restored my appetite. And I'm glad to say that since then I haven't had any of such symptoms again.</p>
+                        
+                        <p>Your heart was so big, it had a place for all. I remember when we organised a birthday party for Josh, Priscilla and Linda. After the food was set and everyone was getting ready to enjoy, you took your car and excused everyone saying you'll be back soon. You did come back soon, but you didn't come alone. You brought with you many children, from where, nobody knew, to come to join in and enjoy the party. Everyone asked you where you had brought the children from. These children were not part of your own family but you graciously thought about them to bring some happiness to their lives. You showed us what a generous person you were. Whilst all of us were thinking about ourselves, focusing on how we were going to enjoy ourselves, you were thinking of other children you felt needed some much love and delicious food.</p>
+                        
+                        <div class="tribute-highlight">
+                            <p>You were really a mother to many and a mother to all.</p>
+                        </div>
+                        
+                        <p>You truly loved God and served Him well with all dedication and diligence. This translated to the love you had for all manner of people. You inspired me and my family by your constant prayers, pieces of advice and lessons from your own life and experiences. Anytime we spoke with you, you would ask Michelle and Josh about their progress in school and encouraged them to work harder and smarter to become the great people God has made them to be. You would say this would make you proud.</p>
+                        
+                        <p>Your attitude to hard work, business and excellence was a quality we will continue to cherish.</p>
+                        
+                        <div class="tribute-memory">
+                            <div class="memory-icon"><i class="fas fa-child"></i></div>
+                            <p>In our short stay with you, you had unconsciously inspired Josh with your passion, enthusiasm and instruction in business that he was very happy to stay behind in Ghana to continue to do business with you. Even at the airport, on our return, he pleaded with us to allow him to go back and help you with your businesses.</p>
+                        </div>
+                        
+                        <p>And when we returned to England, he will occasionally call you to ask how the business is going. You would take your time to teach and explain to him what has been going on in the business during the past few weeks.</p>
+                        
+                        <p>Mama Lucy, you have left a lasting legacy. Not just in the physical but also the intangibles, in your children, family, the church and in all you encountered. This means that even though you are no more here with us. You still live on through the impact you have had in the lives of many people you influenced.</p>
+                        
+                        <p>Mama Lucy, you have lived a good and a fulfilling life. All of us would have loved for you to live much longer on earth than you did. But we acknowledge the sovereignty of God and the fact that He has much better plans for you and for us so we won't argue with Him on this.</p>
+                        
+                        <div class="tribute-highlight final-message">
+                            <p>You loved and treated me like a son. I love and regard you as my mum. You will forever remain in my heart.</p>
+                        </div>
+                        
+                        <p>We have lost you, and it saddens our hearts. But heaven has gained you. It is also your gain because you are in a far better place. For this we are glad, and we hope in the promise of our Lord Jesus Christ who says we, who believe in Him and have trusted Him for eternal life will live, even though we die. This great promise is true for you, for us and all those who will believe and trust Jesus for their eternal salvation.</p>
+                        
+                        <p>Maa Lucy, you have gone ahead of us. Rest well with the Lord till we meet again.</p>
+                    </div>
+                    
+                    <span class="read-more-toggle" data-target="tribute-son-in-law">
+                        Read Full Tribute <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                    
+                    <div class="tribute-signature">
+                        <p>With eternal gratitude and love,<br>Michael</p>
+                        <div class="signature-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grandson's Tribute -->
+            <div class="tribute-card grandson-tribute" data-aos="fade-up">
+                <div class="tribute-header">
+                    <div class="tribute-header-pattern"></div>
+                    <h3>TRIBUTE BY GRANDCHILDREN</h3>
+                    <div class="grandson-hearts">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+                <div class="tribute-content">
+                    <div class="grandson-letter">
+                        <div class="letter-heading">Dear Grandma,</div>
+                        
+                        <div class="read-more-content" id="tribute-grandson">
+                            <p>It's hard for us to believe that you're really gone. You were a kind and selfless person and you inspired us both. This has been a massive loss for us.</p>
+                            
+                            <p>Even though we saw you in person a few times, your impact was evident everywhere in our family. I saw you in the life of my mum, in how she spoke about you and how she lived. And when we did see you, your infectious energy shone brightly.</p>
+                            
+                            <div class="memory-box">
+                                <div class="memory-icon"><i class="fas fa-home"></i></div>
+                                <p>Staying at your house when we visited Ghana was such a fun experience. You were the glue that held everything together, and it was clear how much everyone loved you.</p>
+                            </div>
+                            
+                            <p>I remember how mum would always show us the photos of you dancing in church on Facebook, saying 'look at your grandma', and it breaks my heart that I'll never see you dance ever again. I will miss you so so much and I hope to make you proud.</p>
+                            
+                            <div class="memory-box gas-station-memory">
+                                <div class="memory-title">My Favorite Memory</div>
+                                <p>There are a lot of memories that we had when we went to Ghana but my favourite memory about you was when you took me to the gas station for the first time. I loved it so much that when we left Ghana, I would call grandma every day and ask her how much we made at the gas station each day.</p>
+                            </div>
+                            
+                            <p>I'll miss all of our calls on the phone, you always telling me to study hard and make you proud.</p>
+                            
+                            <div class="scripture-box">
+                                <div class="scripture-icon"><i class="fas fa-bible"></i></div>
+                                <div class="scripture-content">
+                                    <div class="scripture-title">A reading from 1 Thessalonians:</div>
+                                    <p>"Brothers and sisters, we do not want you to be uninformed about those who sleep in death, so that you do not grieve like the rest of mankind, who have no hope. For we believe that Jesus died and rose again, and so we believe that God will bring with Jesus those who have fallen asleep in him."</p>
+                                </div>
+                            </div>
+                            
+                            <p>These verses tell us that although we have lost our beloved grandma, she is now in the hands of God and it is well with her soul. She is now resting free from all suffering and pain.</p>
+                            
+                            <p class="farewell">We will miss you Grandma and we will see you again the day the Lord has planned for us. But for now it's Goodbye. Rest in heavenly peace.</p>
+                            
+                            <div class="fly-high">
+                                <p>Fly high Grandma.</p>
+                                <p>Fly high.</p>
+                                <div class="fly-high-icon">
+                                    <i class="fas fa-dove"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <span class="read-more-toggle" data-target="tribute-grandson">
+                            Read Full Tribute <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    
+                    <div class="tribute-signature">
+                        <p>With love from your grandchilderen, Michelle & Josh</p>
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="tribute-card" data-aos="fade-up">
+                <div class="tribute-header">
+                    <h3>TRIBUTE BY PS. BENE ON BEHALF OF ELIM CITY</h3>
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                </div>
+                <div class="tribute-content">
+                    <div class="featured-quote">
+                        <p>"Many women do noble things, but you surpass them all." — Proverbs 31:28-29</p>
+                    </div>
+                    <h4>Maa Luu – A Faithful Steward, A Selfless Leader, A True Friend</h4>
+                    <div class="read-more-content" id="tribute-elim">
+                        <p>With heavy hearts yet deep gratitude, we celebrate the life of our dear Rev. Mrs. Lucy Perby Nyarko, affectionately known as Maa Luu. She was more than a friend; she was a pillar, a confidante, a relentless worker in the vineyard of the Lord, and a woman of unwavering faith.</p>
+                        
+                        <p>From the very inception of Elim City, Maa Luu was present—praying, serving, and leading. She was one of the pioneers who helped birth the vision of this church, never relenting in her commitment even when work transferred her to Bolgatanga as the Regional Director for VRA. Distance never diminished her devotion; rather, she expanded the work of the ministry by helping plant the Tamale branch of Elim City.</p>
+                        
+                        <p>She was a woman who embraced all—young and old, rich and poor. No task was beneath her, no responsibility too overwhelming. Whether making high-level boardroom decisions as a board member or coordinating the daily operations of the church, she poured her heart into everything she did. As an associate to the Senior Pastor, she provided wise counsel and unwavering support, line-managing three departments and twelve ministries with diligence and grace.</p>
+                        
+                        <p>Her recent role as the pastor of the Aseda (Twi) Service was yet another testament to her deep love for God's people. With a motherly heart and a firm spirit, she shepherded the congregation with passion, ensuring they grew in both faith and community.</p>
+                        
+                        <p>Beyond her service, she shared a special bond with Pastor Gospel—a relationship built on mutual respect, trust, and understanding. Though she was a force to be reckoned with, one thing remained certain: she submitted to pastoral guidance with humility. Even in moments of disagreement, she would say, "Had it not been for Pastor..." or "My Papa has spoken, it is final." Her obedience and reverence for leadership were a mark of her wisdom and spiritual maturity.</p>
+                        
+                        <p>My last encounter with Maa Luu in Accra, the night before I traveled to London, is a moment I will cherish forever. It was a time of warmth, laughter, and deep reflection—one that now holds even greater significance. Little did I know it would be our last conversation. She was special to me, to Pastor Gospel, and to the entire Elim City family. Her absence has created a gap that will take many to fill.</p>
+                        
+                        <p>She will be dearly missed—especially at Christmas, a season she embraced with so much joy. The annual Children's Christmas Party she organized was a highlight for the little ones, who adored her warmth and generosity. Her high-spirited approach to the Carol Service, Christmas by the Fire, and every festive gathering made the season even more special. She was a pillar in the Women's Network, a cherished part of the Diamond Congregation, and an invaluable member of the Finance Team, where her sharp mind and integrity were unmatched.</p>
+                        
+                        <p>For Pastor Adams and me, our Three Musketeers team is no more. The bond we shared, the moments of deep discussions, strategy meetings, and laughter—those will never be the same again.</p>
+                        
+                        <p>Maa Luu's resilience in faith and service was exceptional. She didn't just preach the gospel—she lived it. Whether leading in worship, auditing church finances, or dancing joyfully in praise, she embodied the heart of a true servant of God.</p>
+                        
+                        <p>Her legacy in Elim City is indelible. We have lost a gem, but heaven has gained a saint. Though she is absent in body, her impact remains. We take solace in the fact that she has fought the good fight, finished her race, and kept the faith.</p>
+                        
+                        <p>Rest well and thank you Rev Mrs Perbi - Nyarko, Elim's sweet sixteen and our own Maa Luu. Your life was a testimony, and your reward is sure. Till we meet again in glory.</p>
+                        
+                        <p class="tribute-signature">With love and gratitude,<br>Your friends, colleagues, and church family at Elim City</p>
+                    </div>
+                    <span class="read-more-toggle" data-target="tribute-elim">
+                        Read Full Tribute <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Childhood Friend & Colleague Tribute -->
+            <div class="tribute-card friend-tribute" data-aos="fade-up">
+                <div class="tribute-header">
+                    <div class="friend-tribute-pattern"></div>
+                    <span class="tribute-icon">
+                        <i class="fas fa-handshake"></i>
+                    </span>
+                    <h3>TRIBUTE BY CLEMENT DANSO TANDOH</h3>
+                    <p class="tribute-relationship">Childhood friend and work colleague</p>
+                </div>
+                
+                <div class="tribute-content">
+                    <div class="friend-tribute-intro">
+                        <p>It is with great sadness, yet incredible honour that I write this tribute for our sister, our colleague, our friend Rev Mrs Lucy Perbi-Nyarko.</p>
+                    </div>
+                    
+                    <div class="scripture-verse">
+                        <div class="verse-quote">"I am the resurrection and the life. He who believes in Me though he may die, he shall live. And whoever lives and believes in Me shall never die"</div>
+                        <div class="verse-reference">— John 11:25-26</div>
+                    </div>
+                    
+                    <div class="read-more-content" id="tribute-friend">
+                        <p>Our dear Pastor and Sister Lucy, we are thankful to God for your life. You were so loving, caring and true to be with. As we grew up through our youthful years, we remember the fun and laughter which will always remain in our hearts. The memories we created together will last forever.</p>
+                        
+                        <p>Today, family members, friends and loved ones have gathered to pay our last respect to a unique and virtuous lady Pastor Mrs Lucy Perbi Nyarko. Your tragic passing was a shock beyond imagination.</p>
+                        
+                        <div class="tribute-memory-accent">
+                            <div class="memory-line"></div>
+                            <p>Crosby, Eugene, Rhoda and I were at the hospital when the doctor informed us that you were nearing the end of life. In that moment, my world stood still.</p>
+                            <div class="memory-line"></div>
+                        </div>
+                        
+                        <p>Death has led us to ask the doctors "what is meant by nearing the end of life" what is life truly worth? Today we find it so hard to bid you farewell to a devoted mother, diligent sister, compassionate woman and a people's person. We ask ourselves, what does farewell mean if not death. But will death itself be farewell? How profound is that tragedy that has engulfed us?</p>
+                        
+                        <div class="tribute-qualities">
+                            <span>Loving</span>
+                            <span>Caring</span>
+                            <span>Devoted</span>
+                            <span>Diligent</span>
+                            <span>Compassionate</span>
+                            <span>Virtuous</span>
+                        </div>
+                        
+                        <p>Now, for the first time in our lives, we didn't have you, Rev Mrs Lucy to turn to. The pain we feel for you is deep.</p>
+                        
+                        <p>There is a void that we struggle to fill, emptiness in our family. We shall remain closer than close. May your soul rest in peace with your maker, you have done what you came to do here on earth. Your demise came suddenly but your maker understands.</p>
+                        
+                        <div class="farewell-container">
+                            <div class="farewell-ornament">❦</div>
+                            <div class="farewell-message">
+                                <p>We wish you safe journey into eternity.</p>
+                                <p>Fare thee well Afia Lucy.</p>
+                                <p>May your Ladyship soul rest in peace.</p>
+                                <p>Continue to smile with angels until the trumpet sounds and we meet again. Amen.</p>
+                            </div>
+                            <div class="farewell-ornament">❦</div>
+                        </div>
+                    </div>
+                    
+                    <span class="read-more-toggle" data-target="tribute-friend">
+                        Read Full Tribute <i class="fas fa-chevron-down"></i>
+                    </span>
+                    
+                    <div class="tribute-signature">
+                        <div class="signature-line"></div>
+                        <p>With deep sorrow and fond memories,</p>
+                        <p class="signatory">Clement Danso Tandoh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Service Location</h2>
+            <span class="ornament">❧</span>
+            <div class="location-details" data-aos="fade-up" data-aos-delay="100">
+                <p><i class="fas fa-church"></i> Christ Church Barnet</p>
+                <p><i class="fas fa-map-marker-alt"></i> St Albans Road, Barnet EN5 4LA</p>
+                <p><i class="fas fa-calendar-alt"></i> 12th April 2025</p>
+                <p><i class="fas fa-clock"></i> 6:00PM - 9:00PM</p>
+                <a href="https://maps.app.goo.gl/8ymzA8jM4LYdEBQo9?g_st=com.google.maps.preview.copy" target="_blank" class="btn" style="margin-top: 20px;"><i class="fas fa-map"></i> Get Directions</a>
+            </div>
+            <div class="map-container" data-aos="zoom-in" data-aos-delay="200">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2474.3910481214246!2d-0.19819602406088392!3d51.650957471862365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761981c94afa85%3A0x624e599407d09a2d!2sChrist%20Church%2C%20St%20Albans%20Rd%2C%20Barnet%20EN5%204LA%2C%20UK!5e0!3m2!1sen!2sus!4v1712587173864!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>In Loving Memory of Rev. Mrs. Lucy Perbi-Nyarko</h3>
+            <p>A Faithful Servant of God</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 - In Memory of Rev. Mrs. Lucy Perbi-Nyarko
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+            easing: 'ease-in-out'
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+                navbar.querySelector('.navbar').style.backgroundColor = 'rgba(125, 90, 80, 0.95)';
+                navbar.querySelector('.navbar').style.padding = '5px 20px';
+                navbar.querySelector('.navbar').style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.classList.remove('scrolled');
+                navbar.querySelector('.navbar').style.backgroundColor = 'rgba(125, 90, 80, 0.8)';
+                navbar.querySelector('.navbar').style.padding = '10px 20px';
+                navbar.querySelector('.navbar').style.boxShadow = 'none';
+            }
+        });
+        
+        // Smooth scrolling for internal links
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Close mobile menu when clicking a link
+                const navbarToggler = document.querySelector('.navbar-toggler');
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarToggler.click();
+                }
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Active link highlighting
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section, header');
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Read More functionality
+        document.querySelectorAll('.read-more-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const content = document.getElementById(targetId);
+                
+                content.classList.toggle('expanded');
+                this.classList.toggle('active');
+                
+                if (content.classList.contains('expanded')) {
+                    this.innerHTML = 'Read Less <i class="fas fa-chevron-up"></i>';
+                } else {
+                    this.innerHTML = 'Read More <i class="fas fa-chevron-down"></i>';
+                }
+            });
+        });
+        
+        // Add subtle parallax effect to background images
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.pageYOffset;
+            
+            document.querySelectorAll('section:nth-child(odd)').forEach(section => {
+                const offset = section.offsetTop;
+                const distance = offset - scrollPosition;
+                
+                if (section.querySelector(':before')) {
+                    section.style.backgroundPositionY = `${distance * 0.05}px`;
+                }
+            });
+        });
+        
+        // Add fade-in effect when page loads
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+            
+            // Preload images
+            const imageUrls = ['a.jpg', 'b.jpg'];
+            imageUrls.forEach(url => {
+                const img = new Image();
+                img.src = url;
+            });
+        });
+
+        // Gallery functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = [];
+            const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+            
+            for (let i = 0; i < alphabet.length; i++) {
+                const letter = alphabet.charAt(i);
+                images.push({
+                    src: `${letter}.jpg`,
+                    alt: `Rev. Mrs. Lucy Perbi-Nyarko memorial image ${i+1}`
+                });
+            }
+            
+            // DOM Elements
+            const galleryTrack = document.getElementById('galleryTrack');
+            const galleryThumbnails = document.getElementById('galleryThumbnails');
+            const galleryPrev = document.getElementById('galleryPrev');
+            const galleryNext = document.getElementById('galleryNext');
+            const lightbox = document.getElementById('galleryLightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxCaption = document.getElementById('lightboxCaption');
+            const lightboxClose = document.getElementById('lightboxClose');
+            const lightboxPrev = document.getElementById('lightboxPrev');
+            const lightboxNext = document.getElementById('lightboxNext');
+            
+            // State
+            let currentIndex = 0;
+            
+            // Initialize gallery
+            function initGallery() {
+                // Populate gallery with images
+                images.forEach((image, index) => {
+                    // Create main carousel slide
+                    const slide = document.createElement('div');
+                    slide.className = 'gallery-slide';
+                    slide.innerHTML = `<img src="${image.src}" alt="${image.alt}" loading="lazy">`;
+                    galleryTrack.appendChild(slide);
+                    
+                    // Create thumbnail
+                    const thumbnail = document.createElement('div');
+                    thumbnail.className = 'gallery-thumbnail';
+                    thumbnail.innerHTML = `<img src="${image.src}" alt="Thumbnail ${index+1}" loading="lazy">`;
+                    
+                    if (index === 0) {
+                        thumbnail.classList.add('active');
+                    }
+                    
+                    thumbnail.addEventListener('click', () => {
+                        currentIndex = index;
+                        updateGallery();
+                    });
+                    
+                    galleryThumbnails.appendChild(thumbnail);
+                    
+                    // Add click event to open lightbox
+                    slide.addEventListener('click', () => {
+                        openLightbox(index);
+                    });
+                });
+                
+                // Update the gallery to the initial state
+                updateGallery();
+            }
+            
+            // Update gallery based on current index
+            function updateGallery() {
+                // Update main carousel position
+                galleryTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update thumbnails active state
+                const thumbnails = document.querySelectorAll('.gallery-thumbnail');
+                thumbnails.forEach((thumb, index) => {
+                    if (index === currentIndex) {
+                        thumb.classList.add('active');
+                    } else {
+                        thumb.classList.remove('active');
+                    }
+                });
+                
+                // Scroll the active thumbnail into view
+                const activeThumbnail = thumbnails[currentIndex];
+                if (activeThumbnail) {
+                    const thumbnailsContainer = galleryThumbnails;
+                    const scrollLeft = activeThumbnail.offsetLeft - (thumbnailsContainer.clientWidth / 2) + (activeThumbnail.clientWidth / 2);
+                    thumbnailsContainer.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+                }
+            }
+            
+            // Navigation functions
+            function navigateNext() {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateGallery();
+            }
+            
+            function navigatePrev() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateGallery();
+            }
+            
+            // Lightbox functions
+            function openLightbox(index) {
+                currentIndex = index;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+                updateLightbox();
+            }
+            
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = ''; // Re-enable scrolling
+            }
+            
+            function updateLightbox() {
+                const image = images[currentIndex];
+                // Remove loaded class first
+                lightboxImage.classList.remove('loaded');
+                
+                // Update image after a short delay to allow for transition
+                setTimeout(() => {
+                    lightboxImage.src = image.src;
+                    lightboxImage.alt = image.alt;
+                    lightboxCaption.textContent = `Image ${currentIndex + 1} of ${images.length}`;
+                    
+                    // Add loaded class after image is loaded
+                    lightboxImage.onload = () => {
+                        lightboxImage.classList.add('loaded');
+                    };
+                }, 300);
+            }
+            
+            // Event listeners
+            galleryPrev.addEventListener('click', navigatePrev);
+            galleryNext.addEventListener('click', navigateNext);
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxPrev.addEventListener('click', () => {
+                navigatePrev();
+                updateLightbox();
+            });
+            lightboxNext.addEventListener('click', () => {
+                navigateNext();
+                updateLightbox();
+            });
+            
+            // Close lightbox when clicking outside the image
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (lightbox.classList.contains('active')) {
+                    if (e.key === 'Escape') {
+                        closeLightbox();
+                    } else if (e.key === 'ArrowRight') {
+                        navigateNext();
+                        updateLightbox();
+                    } else if (e.key === 'ArrowLeft') {
+                        navigatePrev();
+                        updateLightbox();
+                    }
+                }
+            });
+            
+            // Touch events for mobile swiping
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            galleryTrack.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            galleryTrack.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            
+            lightbox.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            lightbox.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    // Swipe left, go next
+                    if (lightbox.classList.contains('active')) {
+                        navigateNext();
+                        updateLightbox();
+                    } else {
+                        navigateNext();
+                    }
+                }
+                if (touchEndX > touchStartX + swipeThreshold) {
+                    // Swipe right, go previous
+                    if (lightbox.classList.contains('active')) {
+                        navigatePrev();
+                        updateLightbox();
+                    } else {
+                        navigatePrev();
+                    }
+                }
+            }
+            
+            // Auto-play functionality (can be disabled if not desired)
+            let autoplayInterval;
+            
+            function startAutoplay() {
+                autoplayInterval = setInterval(() => {
+                    navigateNext();
+                }, 5000); // Change slide every 5 seconds
+            }
+            
+            function stopAutoplay() {
+                clearInterval(autoplayInterval);
+            }
+            
+            // Start autoplay by default
+            startAutoplay();
+            
+            // Pause autoplay on hover/interaction
+            const galleryCarousel = document.getElementById('galleryCarousel');
+            
+            galleryCarousel.addEventListener('mouseenter', stopAutoplay);
+            galleryCarousel.addEventListener('mouseleave', startAutoplay);
+            galleryCarousel.addEventListener('touchstart', stopAutoplay);
+            
+            // Initialize the gallery
+            initGallery();
+        });
+
+        
+    </script>
+</body>
+</html>
