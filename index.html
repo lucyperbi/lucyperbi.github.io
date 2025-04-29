@@ -216,6 +216,73 @@
             opacity: 0.05;
             z-index: -1;
         }
+
+        /* Memorial Stream Buttons Styling */
+    .memorial-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .btn-youtube, .btn-facebook {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.1rem;
+        min-width: 220px;
+    }
+    
+    .btn-youtube {
+        background-color: #FF0000;
+        color: var(--light-text);
+    }
+    
+    .btn-facebook {
+        background-color: #4267B2;
+        color: var(--light-text);
+    }
+    
+    .btn-youtube:hover, .btn-facebook:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        color: var(--light-text);
+    }
+    
+    .btn-youtube:hover {
+        background-color: #cc0000;
+    }
+    
+    .btn-facebook:hover {
+        background-color: #3b5998;
+    }
+    
+    .btn-youtube i, .btn-facebook i {
+        margin-right: 10px;
+        font-size: 1.2rem;
+    }
+    
+    @media (max-width: 576px) {
+        .memorial-buttons {
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .btn-youtube, .btn-facebook {
+            width: 100%;
+            padding: 12px 20px;
+        }
+    }
         
         .container {
             max-width: 1200px;
@@ -248,89 +315,501 @@
             margin: 15px 0;
         }
         
-        .program {
-            background-color: var(--program-bg);
-            border: none;
-            border-radius: 15px;
-            padding: 50px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            margin-bottom: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .program::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 10px;
-            background: linear-gradient(to right, var(--accent-color), var(--gold));
-        }
-        
-        .program-header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid rgba(229, 178, 153, 0.3);
-            position: relative;
-        }
-        
-        .program-header::after {
-            content: '✤';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--program-bg);
-            padding: 0 20px;
-            color: var(--gold);
-            font-size: 1.2rem;
+/* Enhanced Program Section Styling */
+.enhanced-program {
+        background-color: var(--background-color);
+        padding: 100px 0;
+        position: relative;
+    }
+    
+    .enhanced-program::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('b.jpg') center/cover no-repeat fixed;
+        opacity: 0.04;
+        z-index: 0;
+    }
+    
+    .elegant-title {
+        font-size: 3rem;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+    
+    .decorative-divider {
+        position: relative;
+        height: 30px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    
+    .decorative-divider::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 1px;
+        background: linear-gradient(to right, transparent, var(--gold), transparent);
+    }
+    
+    .divider-ornament {
+        position: relative;
+        display: inline-block;
+        background-color: var(--background-color);
+        padding: 0 20px;
+        color: var(--gold);
+        font-size: 1.8rem;
+    }
+    
+    /* Program Card Styling */
+    .program-card, .hymn-card {
+        background-color: var(--program-bg);
+        border-radius: 15px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        margin-bottom: 60px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .program-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(to right, var(--gold), var(--accent-color), var(--gold));
+    }
+    
+    /* Program Header Styling */
+    .program-header-wrapper {
+        position: relative;
+        padding: 60px 40px;
+        background: linear-gradient(
+            to bottom, 
+            rgba(125, 90, 80, 0.08) 0%,
+            rgba(229, 178, 153, 0.05) 100%
+        );
+        border-bottom: 1px solid rgba(229, 178, 153, 0.2);
+    }
+    
+    .corner-ornament {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .corner-ornament.top-left {
+        top: 20px;
+        left: 20px;
+        border-top: 2px solid var(--gold);
+        border-left: 2px solid var(--gold);
+        border-radius: 5px 0 0 0;
+    }
+    
+    .corner-ornament.top-right {
+        top: 20px;
+        right: 20px;
+        border-top: 2px solid var(--gold);
+        border-right: 2px solid var(--gold);
+        border-radius: 0 5px 0 0;
+    }
+    
+    .corner-ornament.bottom-left {
+        bottom: 20px;
+        left: 20px;
+        border-bottom: 2px solid var(--gold);
+        border-left: 2px solid var(--gold);
+        border-radius: 0 0 0 5px;
+    }
+    
+    .corner-ornament.bottom-right {
+        bottom: 20px;
+        right: 20px;
+        border-bottom: 2px solid var(--gold);
+        border-right: 2px solid var(--gold);
+        border-radius: 0 0 5px 0;
+    }
+    
+    .program-header {
+        text-align: center;
+    }
+    
+    .program-header h3 {
+        font-size: 2.8rem;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 1px;
+    }
+    
+    .date-label {
+        font-size: 1.3rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        font-family: 'Cormorant Garamond', serif;
+    }
+    
+    .venue-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    
+    .venue-icon {
+        color: var(--accent-color);
+        font-size: 1.4rem;
+        margin-right: 15px;
+    }
+    
+    .venue-info p {
+        font-size: 1.1rem;
+        margin: 0;
+    }
+    
+    .time-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    
+    .time-item {
+        display: flex;
+        align-items: center;
+        background-color: rgba(229, 178, 153, 0.1);
+        padding: 10px 20px;
+        border-radius: 30px;
+    }
+    
+    .time-item i {
+        margin-right: 10px;
+        color: var(--accent-color);
+    }
+    
+    /* Officiating Minister Styling */
+    .officiating-minister {
+        background-color: rgba(252, 222, 192, 0.1);
+        padding: 30px;
+        margin: 40px;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        border: 1px solid rgba(229, 178, 153, 0.2);
+    }
+    
+    .minister-label {
+        display: inline-block;
+        background-color: var(--program-bg);
+        padding: 5px 20px;
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.1rem;
+        color: var(--primary-color);
+        letter-spacing: 1px;
+    }
+    
+    .minister-name {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        color: var(--primary-color);
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
+    
+    .minister-title {
+        font-family: 'Lora', serif;
+        font-size: 1.1rem;
+        color: var(--accent-color);
+        font-style: italic;
+    }
+    
+    .minister-decoration {
+        margin-top: 15px;
+        color: var(--gold);
+        font-size: 1.4rem;
+        opacity: 0.6;
+    }
+    
+    /* Section Heading Styling */
+    .section-heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 50px 0 30px;
+        padding: 0 40px;
+    }
+    
+    .heading-line {
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(to right, transparent, var(--accent-color));
+    }
+    
+    .heading-line:last-child {
+        background: linear-gradient(to left, transparent, var(--accent-color));
+    }
+    
+    .section-heading h3 {
+        padding: 0 20px;
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-color);
+        font-size: 2.2rem;
+        margin: 0;
+    }
+    
+    .graveside-heading {
+        margin-top: 60px;
+    }
+    
+    /* Program Items Grid Styling */
+    .program-items-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 0 40px;
+    }
+    
+    .program-column {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .program-item {
+        display: flex;
+        align-items: flex-start;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+        padding: 15px;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(229, 178, 153, 0.08);
+    }
+    
+    .program-item:hover {
+        background-color: rgba(252, 222, 192, 0.1);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .item-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background-color: var(--accent-color);
+        color: white;
+        border-radius: 50%;
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+    
+    .item-content {
+        flex: 1;
+    }
+    
+    .item-content p {
+        margin: 0;
+        font-size: 1.05rem;
+        line-height: 1.5;
+    }
+    
+    /* Graveside Items Styling */
+    .graveside-items {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 40px 40px;
+    }
+    
+    /* Hymn Styling */
+    .hymn-card {
+        margin-top: 60px;
+        background-color: var(--program-bg);
+        border-radius: 15px;
+        overflow: hidden;
+        border-left: 5px solid var(--gold);
+    }
+    
+    .hymn-header {
+        background-color: rgba(125, 90, 80, 0.8);
+        padding: 25px;
+        color: white;
+        text-align: center;
+        position: relative;
+    }
+    
+    .hymn-icon {
+        margin-bottom: 10px;
+        font-size: 1.8rem;
+    }
+    
+    .hymn-header h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        margin: 0;
+        letter-spacing: 1px;
+    }
+    
+    .hymn-content {
+        padding: 40px;
+    }
+    
+    .hymn-verse, .hymn-chorus {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    
+    .verse-number, .chorus-label {
+        flex: 0 0 40px;
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        color: var(--accent-color);
+        font-size: 1.1rem;
+    }
+    
+    .chorus-label {
+        flex: 0 0 80px;
+        font-style: italic;
+    }
+    
+    .verse-text, .chorus-text {
+        flex: 1;
+    }
+    
+    .verse-text p, .chorus-text p {
+        margin: 0;
+        line-height: 1.8;
+    }
+    
+    .hymn-chorus {
+        background-color: rgba(229, 178, 153, 0.08);
+        padding: 20px;
+        border-radius: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .echo {
+        color: var(--accent-color);
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+    
+    /* Responsive Styling */
+    @media (max-width: 992px) {
+        .elegant-title {
+            font-size: 2.5rem;
         }
         
         .program-header h3 {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-            letter-spacing: 0.5px;
+            font-size: 2.4rem;
         }
         
-        .program-header p {
-            font-style: italic;
-            margin-bottom: 5px;
-            font-size: 1.1rem;
-            color: var(--text-color);
+        .time-details {
+            flex-direction: column;
+            gap: 10px;
         }
         
-        .program-item {
-            margin-bottom: 25px;
-            display: flex;
-            align-items: flex-start;
-            position: relative;
-            padding-left: 20px;
+        .section-heading h3 {
+            font-size: 1.8rem;
         }
         
-        .program-item::before {
-            content: '❦';
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-            font-size: 0.9rem;
+        .minister-name {
+            font-size: 1.4rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .program-items-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
         }
         
-        .program-item span {
-            font-weight: 600;
-            min-width: 180px;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+        .program-header-wrapper, .officiating-minister {
+            padding: 30px 20px;
         }
         
-        .program-item p {
-            font-family: 'Lora', serif;
-            opacity: 0.9;
+        .officiating-minister {
+            margin: 30px 20px;
         }
         
+        .program-header h3 {
+            font-size: 2rem;
+        }
+        
+        .date-label {
+            font-size: 1.2rem;
+        }
+        
+        .hymn-header h3 {
+            font-size: 1.6rem;
+        }
+        
+        .section-heading {
+            padding: 0 20px;
+        }
+        
+        .program-items-grid, .graveside-items {
+            padding: 0 20px;
+        }
+        
+        .graveside-items {
+            padding-bottom: 30px;
+        }
+        
+        .hymn-content {
+            padding: 30px 20px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .elegant-title {
+            font-size: 2rem;
+        }
+        
+        .program-header h3 {
+            font-size: 1.8rem;
+        }
+        
+        .corner-ornament {
+            width: 30px;
+            height: 30px;
+        }
+        
+        .minister-name {
+            font-size: 1.3rem;
+        }
+        
+        .hymn-verse, .hymn-chorus {
+            flex-direction: column;
+        }
+        
+        .verse-number, .chorus-label {
+            margin-bottom: 10px;
+        }
+        
+        .hymn-chorus {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
         /* Gallery Styling */
         .gallery-controls {
             display: flex;
@@ -630,6 +1109,391 @@
                 border-radius: 10px;
             }
         }
+
+        /* Children's Tribute Styling - Enhanced Aesthetics */
+    .children-tribute {
+        margin-top: 60px;
+        background-color: var(--program-bg);
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        position: relative;
+    }
+    
+    .children-tribute::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(to right, var(--accent-color), var(--gold), var(--accent-color));
+    }
+    
+    .children-tribute .tribute-header {
+        background: linear-gradient(135deg, #a87452 0%, #b48370 100%);
+        padding: 40px;
+        position: relative;
+        text-align: center;
+    }
+    
+    .tribute-header-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('pattern.jpg');
+        background-size: cover;
+        opacity: 0.05;
+        mix-blend-mode: overlay;
+    }
+    
+    .tribute-accent-line {
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        transform: translateY(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: var(--accent-color);
+    }
+    
+    .children-tribute .tribute-header h3 {
+        font-size: 1.3rem;
+        color: var(--primary-color);
+        letter-spacing: 2px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    
+    .children-title h4 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-color);
+        font-size: 3rem;
+        margin: 5px 0;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    
+    .heart-decoration {
+        margin-top: 15px;
+    }
+    
+    .heart-icon {
+        color: var(--accent-color);
+        font-size: 1.5rem;
+        display: inline-block;
+        animation: heartbeat 1.5s infinite;
+    }
+    
+    @keyframes heartbeat {
+        0% { transform: scale(1); }
+        14% { transform: scale(1.1); }
+        28% { transform: scale(1); }
+        42% { transform: scale(1.1); }
+        70% { transform: scale(1); }
+    }
+    
+    .children-tribute .tribute-content {
+        padding: 40px;
+        position: relative;
+    }
+    
+    .children-salutation {
+        text-align: center;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    
+    .children-salutation p {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        color: var(--primary-color);
+        font-style: italic;
+        display: inline-block;
+        position: relative;
+        padding: 0 20px;
+    }
+    
+    .children-salutation p::before,
+    .children-salutation p::after {
+        content: '❧';
+        color: var(--accent-color);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.2rem;
+    }
+    
+    .children-salutation p::before {
+        left: -15px;
+    }
+    
+    .children-salutation p::after {
+        right: -15px;
+    }
+    
+    .children-tribute-text {
+        position: relative;
+    }
+    
+    #tribute-children p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+        font-size: 1.05rem;
+    }
+    
+    .tribute-divider {
+        text-align: center;
+        margin: 30px 0;
+        position: relative;
+    }
+    
+    .tribute-divider::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+    }
+    
+    .divider-ornament {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        background-color: var(--program-bg);
+        padding: 0 20px;
+        color: var(--accent-color);
+        font-size: 1rem;
+    }
+    
+    .tribute-highlight {
+        margin: 30px 0;
+        padding: 25px;
+        background-color: rgba(243, 229, 245, 0.3);
+        border-radius: 10px;
+        border-left: 3px solid var(--accent-color);
+        font-family: 'Playfair Display', serif;
+        font-size: 1.1rem;
+        color: var(--primary-color);
+        line-height: 1.8;
+    }
+    
+    .scripture-meditation {
+        margin: 30px 0;
+        text-align: center;
+        position: relative;
+        padding: 30px 20px;
+        background-color: rgba(248, 187, 208, 0.1);
+        border-radius: 10px;
+    }
+    
+    .meditation-intro {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+    
+    .scripture-text {
+        margin: 15px 0;
+        font-family: 'Playfair Display', serif;
+        color: var(--accent-color);
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.6;
+    }
+    
+    .meditation-conclusion {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        color: var(--primary-color);
+        margin-top: 15px;
+        font-size: 1.1rem;
+    }
+    
+    .final-echo {
+        text-align: center !important;
+        font-family: 'Playfair Display', serif !important;
+        font-style: italic !important;
+        color: var(--primary-color) !important;
+        font-size: 1.2rem !important;
+        margin-top: 30px !important;
+    }
+    
+    .children-memory-frame {
+        margin: 40px 0;
+    }
+    
+    .frame-border {
+        padding: 15px;
+        background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+        border-radius: 10px;
+    }
+    
+    .memory-content {
+        background-color: white;
+        padding: 30px;
+        border-radius: 5px;
+        position: relative;
+        text-align: center;
+    }
+    
+    .memory-icon, .memory-icon-end {
+        color: var(--accent-color);
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        opacity: 0.7;
+    }
+    
+    .memory-icon-end {
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+    
+    .memory-content p {
+        font-family: 'Lora', serif;
+        font-style: italic;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: var(--primary-color);
+    }
+    
+    .tribute-signature {
+        margin-top: 40px;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-color);
+    }
+    
+    .signatory {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 15px 0;
+    }
+    
+    .children-handprints {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .handprint {
+        color: var(--accent-color);
+        font-size: 1.8rem;
+        transform: rotate(-10deg);
+        opacity: 0.8;
+    }
+    
+    .handprint.small {
+        font-size: 1.4rem;
+        transform: rotate(10deg);
+        opacity: 0.6;
+    }
+    
+    .handprint.smaller {
+        font-size: 1rem;
+        transform: rotate(-5deg);
+        opacity: 0.5;
+    }
+    
+    @media (max-width: 992px) {
+        .children-title h4 {
+            font-size: 2.5rem;
+        }
+        
+        .tribute-accent-line {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .children-tribute .tribute-header {
+            padding: 30px;
+        }
+        
+        .children-title h4 {
+            font-size: 2.2rem;
+        }
+        
+        .children-tribute .tribute-content {
+            padding: 30px;
+        }
+        
+        .children-salutation p {
+            font-size: 1.4rem;
+        }
+        
+        .tribute-highlight, .scripture-meditation {
+            padding: 20px;
+        }
+        
+        .scripture-text {
+            font-size: 1.1rem;
+        }
+        
+        .final-echo {
+            font-size: 1.1rem !important;
+        }
+        
+        .memory-content {
+            padding: 25px 20px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .children-tribute .tribute-header {
+            padding: 25px 20px;
+        }
+        
+        .children-title h4 {
+            font-size: 1.8rem;
+        }
+        
+        .children-tribute .tribute-content {
+            padding: 25px 20px;
+        }
+        
+        .children-salutation p {
+            font-size: 1.3rem;
+        }
+        
+        .children-salutation p::before,
+        .children-salutation p::after {
+            display: none;
+        }
+        
+        .tribute-highlight {
+            font-size: 1rem;
+        }
+        
+        .scripture-text {
+            font-size: 1rem;
+        }
+        
+        .children-memory-frame {
+            margin: 30px 0;
+        }
+        
+        .frame-border {
+            padding: 10px;
+        }
+        
+        .memory-content {
+            padding: 20px 15px;
+        }
+        
+        .signatory {
+            font-size: 1.3rem;
+        }
+    }
         /* Gallery Styling */
         .gallery-controls {
             display: flex;
@@ -1361,6 +2225,298 @@
             opacity: 0.05;
             z-index: 0;
         }
+
+        /* STU Alumni Tribute Styling */
+    .stu-tribute {
+        margin-top: 60px;
+        background-color: var(--program-bg);
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        position: relative;
+    }
+    
+    .stu-tribute::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(to right, #D4AF37 70%, #006400 30%);
+    }
+    
+    .stu-tribute .tribute-header {
+        background: linear-gradient(to right, #5f5751, #835940);
+        padding: 40px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+    
+    .tribute-header-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('pattern.jpg');
+        background-size: cover;
+        opacity: 0.08;
+        mix-blend-mode: overlay;
+    }
+    
+    .stu-emblem {
+        margin-bottom: 20px;
+    }
+    
+    .stu-logo-placeholder {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(212, 175, 55, 0.9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        color: white;
+        font-size: 24px;
+        box-shadow: 0 5px 15px rgba(145, 117, 117, 0.2);
+    }
+    
+    .stu-tribute .tribute-header h3 {
+        font-size: 1.3rem;
+        color: var(--light-text);
+        letter-spacing: 2px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    
+    .stu-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stu-title h4 {
+        font-family: 'Playfair Display', serif;
+        color: #D4AF37;
+        font-size: 1.8rem;
+        margin: 5px 0;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    
+    .stu-tribute .tribute-content {
+        padding: 40px;
+        position: relative;
+    }
+    
+    .scripture-citation {
+        background-color: rgba(252, 222, 192, 0.15);
+        padding: 30px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+        border-left: 3px solid var(--gold);
+        position: relative;
+        font-family: 'Playfair Display', serif;
+    }
+    
+    .scripture-citation::before,
+    .scripture-citation::after {
+        content: '"';
+        font-family: 'Georgia', serif;
+        font-size: 3rem;
+        color: rgba(212, 175, 55, 0.2);
+        position: absolute;
+    }
+    
+    .scripture-citation::before {
+        top: 10px;
+        left: 10px;
+    }
+    
+    .scripture-citation::after {
+        bottom: -10px;
+        right: 10px;
+        transform: rotate(180deg);
+    }
+    
+    .scripture-citation p {
+        font-style: italic;
+        font-size: 1.15rem;
+        color: #D4AF37;
+        line-height: 1.6;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .scripture-source {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1rem;
+        color: var(--accent-color);
+    }
+    
+    .stu-tribute-content {
+        position: relative;
+    }
+    
+    .tribute-first-letter {
+        float: left;
+        font-family: 'Playfair Display', serif;
+        font-size: 4.5rem;
+        line-height: 0.8;
+        margin-right: 5px;
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+    
+    #tribute-stu p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+        font-size: 1.05rem;
+    }
+    
+    .traditional-tribute {
+        margin-top: 40px;
+        padding: 25px;
+        background-color: rgba(252, 222, 192, 0.15);
+        border-radius: 10px;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        border-left: 3px solid var(--gold);
+    }
+    
+    .traditional-tribute p {
+        font-size: 1.15rem !important;
+        color: var(--primary-color);
+        margin-bottom: 10px !important;
+    }
+    
+    .traditional-tribute p:last-child {
+        font-weight: 500;
+    }
+    
+    .tribute-signature {
+        margin-top: 40px;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-color);
+    }
+    
+    .signature-line {
+        height: 1px;
+        width: 150px;
+        margin: 0 auto 20px;
+        background: linear-gradient(to right, transparent, var(--gold), transparent);
+    }
+    
+    .signatory {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin: 15px 0;
+    }
+    
+    .stu-footer-emblem {
+        margin-top: 20px;
+        color: var(--gold);
+        font-size: 1.5rem;
+    }
+    
+    @media (max-width: 992px) {
+        .stu-title h4 {
+            font-size: 1.6rem;
+        }
+        
+        .tribute-first-letter {
+            font-size: 4rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .stu-tribute .tribute-header {
+            padding: 30px;
+        }
+        
+        .stu-logo-placeholder {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+        
+        .stu-title h4 {
+            font-size: 1.4rem;
+        }
+        
+        .stu-tribute .tribute-content {
+            padding: 30px;
+        }
+        
+        .scripture-citation {
+            padding: 25px;
+        }
+        
+        .scripture-citation p {
+            font-size: 1.05rem;
+        }
+        
+        .tribute-first-letter {
+            font-size: 3.5rem;
+        }
+        
+        .traditional-tribute p {
+            font-size: 1.05rem !important;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .stu-title h4 {
+            font-size: 1.2rem;
+        }
+        
+        .stu-tribute .tribute-header {
+            padding: 25px;
+        }
+        
+        .stu-logo-placeholder {
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+        }
+        
+        .stu-tribute .tribute-content {
+            padding: 25px 20px;
+        }
+        
+        .scripture-citation {
+            padding: 20px;
+        }
+        
+        .scripture-citation p {
+            font-size: 1rem;
+        }
+        
+        .scripture-citation::before,
+        .scripture-citation::after {
+            font-size: 2.5rem;
+        }
+        
+        .tribute-first-letter {
+            font-size: 3rem;
+        }
+        
+        .traditional-tribute {
+            padding: 20px 15px;
+        }
+        
+        .signatory {
+            font-size: 1.2rem;
+        }
+    }
         
         .tribute-card {
             background-color: var(--program-bg);
@@ -1843,6 +2999,890 @@
                 padding: 20px 15px;
             }
         }
+
+     /* GLiPGOA Tribute Styling */
+    .glipgoa-tribute {
+        margin-top: 60px;
+        background-color: var(--program-bg);
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        position: relative;
+    }
+    
+    .glipgoa-tribute::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(to right, var(--gold), var(--gold));
+    }
+    
+    .glipgoa-tribute .tribute-header {
+        background-color: var(--background-color);
+        padding: 40px;
+        position: relative;
+        text-align: center;
+        border-bottom: 1px solid rgba(229, 178, 153, 0.2);
+    }
+    
+    .tribute-header-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('pattern.jpg');
+        background-size: cover;
+        opacity: 0.04;
+        mix-blend-mode: overlay;
+    }
+    
+    .glipgoa-logo-container {
+        margin-bottom: 25px;
+    }
+    
+    .glipgoa-logo {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .glipgoa-circle-outer {
+        width: 100%;
+        height: 100%;
+        border: 6px solid var(--gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .glipgoa-circle-inner {
+        width: 70%;
+        height: 70%;
+        border: 6px solid var(--gold);
+        border-radius: 50%;
+    }
+    
+    .glipgoa-title {
+        margin-bottom: 20px;
+    }
+    
+    .glipgoa-title h3 {
+        font-family: 'Playfair Display', serif;
+        color: var(--gold);
+        font-size: 2rem;
+        margin: 5px 0;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    
+    .accent-line {
+        width: 80px;
+        height: 3px;
+        background-color: var(--gold);
+        margin: 0 auto;
+    }
+    
+    .glipgoa-tribute .tribute-content {
+        padding: 40px;
+        position: relative;
+    }
+    
+    .tribute-letter {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+    }
+    
+    .letter-initial {
+        font-family: 'Playfair Display', serif;
+        font-size: 4rem;
+        line-height: 0.8;
+        font-weight: 600;
+        color: var(--gold);
+        margin-right: 8px;
+    }
+    
+    .tribute-letter p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-top: 8px;
+    }
+    
+    .tribute-paragraphs p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+        font-size: 1.05rem;
+    }
+    
+    .tribute-message {
+        margin: 30px 0;
+        padding: 30px;
+        background-color: rgba(252, 222, 192, 0.1);
+        border-radius: 15px;
+        border-left: 3px solid var(--gold);
+        position: relative;
+    }
+    
+    .tribute-message::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: -3px;
+        width: 3px;
+        height: 40px;
+        background-color: var(--gold);
+    }
+    
+    .tribute-message::after {
+        content: '';
+        position: absolute;
+        bottom: 20px;
+        left: -3px;
+        width: 3px;
+        height: 40px;
+        background-color: var(--gold);
+    }
+    
+    .tribute-message p {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .tribute-message p:last-child {
+        margin-bottom: 0;
+    }
+    
+    .farewell {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-size: 1.1rem;
+        color: var(--primary-color);
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(229, 178, 153, 0.3);
+    }
+    
+    .tribute-signature {
+        margin-top: 40px;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-color);
+    }
+    
+    .signature-line {
+        height: 1px;
+        width: 120px;
+        margin: 0 auto 20px;
+        background: linear-gradient(to right, transparent, var(--gold), transparent);
+    }
+    
+    .signatory {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin: 15px 0;
+        color: var(--primary-color);
+    }
+    
+    .signature-emblem {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .mini-circle-outer {
+        width: 40px;
+        height: 40px;
+        border: 3px solid var(--gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .mini-circle-inner {
+        width: 60%;
+        height: 60%;
+        border: 3px solid var(--gold);
+        border-radius: 50%;
+    }
+    
+    @media (max-width: 992px) {
+        .glipgoa-title h3 {
+            font-size: 1.8rem;
+        }
+        
+        .glipgoa-logo {
+            width: 90px;
+            height: 90px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .glipgoa-tribute .tribute-header {
+            padding: 30px;
+        }
+        
+        .glipgoa-logo {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .glipgoa-title h3 {
+            font-size: 1.6rem;
+        }
+        
+        .glipgoa-tribute .tribute-content {
+            padding: 30px;
+        }
+        
+        .letter-initial {
+            font-size: 3.5rem;
+        }
+        
+        .tribute-message {
+            padding: 25px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .glipgoa-logo {
+            width: 70px;
+            height: 70px;
+        }
+        
+        .glipgoa-title h3 {
+            font-size: 1.4rem;
+        }
+        
+        .glipgoa-tribute .tribute-header {
+            padding: 25px;
+        }
+        
+        .glipgoa-tribute .tribute-content {
+            padding: 25px 20px;
+        }
+        
+        .letter-initial {
+            font-size: 3rem;
+        }
+        
+        .tribute-message {
+            padding: 20px;
+        }
+        
+        .signatory {
+            font-size: 1.2rem;
+        }
+    }   
+
+        /* VRA Tribute Styling */
+    .vra-tribute {
+        margin-top: 60px;
+        background-color: var(--program-bg);
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        position: relative;
+    }
+    
+    .vra-tribute::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(to right, #806d62 30%, #7D5A50 70%);
+    }
+    
+    .vra-tribute .tribute-header {
+        background: linear-gradient(to right, #665757, #8f6161);
+        padding: 40px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+    
+    .tribute-header-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('pattern.jpg');
+        background-size: cover;
+        opacity: 0.1;
+        mix-blend-mode: overlay;
+    }
+    
+    .vra-logo-container {
+        margin-bottom: 20px;
+    }
+    
+    .vra-logo-placeholder {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(212, 175, 55, 0.9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        color: white;
+        font-size: 24px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .vra-tribute .tribute-header h3 {
+        font-size: 1.3rem;
+        color: var(--light-text);
+        letter-spacing: 2px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    
+    .vra-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .vra-title h4 {
+        font-family: 'Playfair Display', serif;
+        color: #D4AF37;
+        font-size: 1.8rem;
+        margin: 5px 0;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    
+    .vra-tribute .tribute-content {
+        padding: 40px;
+        position: relative;
+    }
+    
+    .vra-opening-poem {
+        text-align: center;
+        margin-bottom: 30px;
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        color: var(--primary-color);
+        font-size: 1.2rem;
+        line-height: 1.7;
+    }
+    
+    .scripture-block {
+        background-color: rgba(252, 222, 192, 0.15);
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+        border-left: 3px solid var(--gold);
+        border-right: 3px solid var(--gold);
+    }
+    
+    .scripture-block p {
+        font-style: italic;
+        font-size: 1.1rem;
+        color: var(--primary-color);
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+    
+    .scripture-source {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1rem;
+        color: var(--accent-color);
+    }
+    
+    #tribute-vra p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+        font-size: 1.05rem;
+    }
+    
+    .vra-closing {
+        margin-top: 30px;
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid rgba(229, 178, 153, 0.3);
+        border-bottom: 1px solid rgba(229, 178, 153, 0.3);
+    }
+    
+    .vra-closing p {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.15rem !important;
+        color: var(--primary-color);
+        font-weight: 500;
+        margin-bottom: 10px !important;
+    }
+    
+    .vra-closing p:last-child {
+        font-style: italic;
+    }
+    
+    .tribute-signature {
+        margin-top: 40px;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-color);
+    }
+    
+    .signature-line {
+        height: 1px;
+        width: 150px;
+        margin: 0 auto 20px;
+        background: linear-gradient(to right, transparent, var(--gold), transparent);
+    }
+    
+    .signatory {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin: 10px 0 5px;
+    }
+    
+    .sub-signatory {
+        font-style: italic;
+        color: var(--accent-color);
+        margin-bottom: 15px;
+    }
+    
+    .vra-emblem {
+        margin-top: 20px;
+        color: var(--gold);
+        font-size: 1.5rem;
+    }
+    
+    @media (max-width: 992px) {
+        .vra-title h4 {
+            font-size: 1.6rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .vra-tribute .tribute-header {
+            padding: 30px;
+        }
+        
+        .vra-logo-placeholder {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+        
+        .vra-title h4 {
+            font-size: 1.4rem;
+        }
+        
+        .vra-tribute .tribute-content {
+            padding: 30px;
+        }
+        
+        .scripture-block {
+            padding: 20px;
+        }
+        
+        .scripture-block p {
+            font-size: 1rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .vra-title h4 {
+            font-size: 1.2rem;
+        }
+        
+        .vra-tribute .tribute-header {
+            padding: 25px;
+        }
+        
+        .vra-logo-placeholder {
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+        }
+        
+        .vra-opening-poem {
+            font-size: 1.1rem;
+        }
+        
+        .vra-tribute .tribute-content {
+            padding: 25px 20px;
+        }
+        
+        .scripture-block {
+            padding: 15px;
+        }
+        
+        .signatory {
+            font-size: 1.2rem;
+        }
+    }
+
+        /* Widower's Tribute Styling */
+        .widower-tribute {
+            margin-top: 60px;
+            background-color: var(--program-bg);
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+        
+        .widower-tribute::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--gold), var(--primary-color));
+        }
+        
+        .widower-tribute .tribute-header {
+            background: linear-gradient(to right, #4A3933, #7D5A50);
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+        }
+        
+        .tribute-header-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('pattern.jpg');
+            background-size: cover;
+            opacity: 0.1;
+            mix-blend-mode: overlay;
+        }
+        
+        .tribute-accent-line {
+            position: absolute;
+            top: 50%;
+            right: 40px;
+            transform: translateY(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--gold);
+        }
+        
+        .widower-tribute .tribute-header h3 {
+            font-size: 1.3rem;
+            color: var(--light-text);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .scripture-quote {
+            margin-top: 20px;
+            padding-left: 20px;
+            border-left: 3px solid var(--gold);
+        }
+        
+        .scripture-quote p {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .scripture-reference {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05rem;
+            color: var(--accent-color);
+        }
+        
+        .widower-tribute .tribute-content {
+            padding: 40px;
+            position: relative;
+        }
+        
+        .tribute-columns {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .tribute-text-column {
+            flex: 3;
+        }
+        
+        .widower-photo-column {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .widower-photo {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 5px solid white;
+        }
+        
+        .tribute-photo {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .widower-photo:hover .tribute-photo {
+            transform: scale(1.05);
+        }
+        
+        .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+        }
+        
+        .spiritual-life-note {
+            background-color: rgba(252, 222, 192, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent-color);
+        }
+        
+        .spiritual-life-note h4 {
+            color: var(--primary-color);
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .spiritual-life-note h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+        
+        .spiritual-life-note p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .spiritual-life-note p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .widower-continued {
+            padding-top: 30px;
+            border-top: 1px dashed rgba(229, 178, 153, 0.3);
+        }
+        
+        .widower-continued p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .final-message {
+            background-color: rgba(252, 222, 192, 0.15);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .final-quote {
+            font-style: italic;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .hymn-quote {
+            margin: 40px 0;
+            position: relative;
+            padding: 40px;
+            background-color: rgba(125, 90, 80, 0.04);
+            border-radius: 10px;
+        }
+        
+        .hymn-quote::before,
+        .hymn-quote::after {
+            content: '"';
+            font-family: 'Georgia', serif;
+            font-size: 4rem;
+            color: rgba(212, 175, 55, 0.2);
+            position: absolute;
+            line-height: 0;
+        }
+        
+        .hymn-quote::before {
+            top: 30px;
+            left: 15px;
+        }
+        
+        .hymn-quote::after {
+            bottom: 10px;
+            right: 15px;
+            transform: rotate(180deg);
+        }
+        
+        .quote-intro {
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--primary-color);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .quote-text p {
+            margin-bottom: 20px;
+        }
+        
+        .quote-text p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .tribute-signature {
+            margin-top: 40px;
+            text-align: right;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            border-top: 1px solid rgba(229, 178, 153, 0.3);
+            padding-top: 30px;
+        }
+        
+        .signatory {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 10px 0 5px;
+        }
+        
+        .relationship {
+            font-style: italic;
+            color: var(--accent-color);
+        }
+        
+        @media (max-width: 992px) {
+            .tribute-columns {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .widower-photo-column {
+                order: -1;
+            }
+            
+            .widower-photo {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .spiritual-life-note {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+    
+    @media (max-width: 768px) {
+        .widower-tribute .tribute-header {
+            padding: 30px;
+        }
+        
+        .scripture-quote p {
+            font-size: 1.2rem;
+        }
+        
+        .widower-tribute .tribute-content {
+            padding: 30px;
+        }
+        
+        .hymn-quote {
+            padding: 30px 20px;
+        }
+        
+        .hymn-quote::before,
+        .hymn-quote::after {
+            font-size: 3rem;
+        }
+        
+        .quote-text {
+            font-size: 1rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .widower-tribute .tribute-header {
+            padding: 25px;
+        }
+        
+        .tribute-accent-line {
+            display: none;
+        }
+        
+        .scripture-quote p {
+            font-size: 1.1rem;
+        }
+        
+        .scripture-reference {
+            font-size: 0.95rem;
+        }
+        
+        .widower-tribute .tribute-content {
+            padding: 25px 20px;
+        }
+        
+        .final-message,
+        .spiritual-life-note {
+            padding: 20px 15px;
+        }
+        
+        .hymn-quote {
+            padding: 25px 15px;
+            margin: 30px 0;
+        }
+        
+        .quote-intro {
+            font-size: 1rem;
+        }
+        
+        .signatory {
+            font-size: 1.2rem;
+        }
+    }
 
         /* Grandson's Tribute Styling */
         .grandson-tribute {
@@ -2522,98 +4562,291 @@
     <!-- Hero Section -->
     <header id="home">
         <div class="hero-text animate__animated animate__fadeIn">
+            <p>In Loving Memory of</p>
             <h1>Rev. Mrs. Lucy Perbi-Nyarko</h1>
-            <p>In Loving Memory</p>
+            
             <div class="dates">A Faithful Servant of God</div>
-            <a href="#program" class="btn">View Memorial Service</a>
+            <div class="memorial-buttons">
+                <a href="https://www.youtube.com/@elimcitytv8291" target="_blank" class="btn btn-youtube">
+                    <i class="fab fa-youtube"></i> Watch on YouTube
+                </a>
+                <a href="https://www.facebook.com/share/16FsAsynV4/" target="_blank" class="btn btn-facebook">
+                    <i class="fab fa-facebook-f"></i> Watch on Facebook
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Program Section -->
-    <section id="program">
+    <section id="program" class="enhanced-program">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Memorial Service Program</h2>
-            <span class="ornament">❧</span>
-            <div class="program" data-aos="fade-up" data-aos-delay="100">
-                <div class="program-header">
-                    <h3>Memorial Service - 12th April 2025</h3>
-                    <p>Christ Church Barnet, St Albans Road, Barnet EN5 4LA</p>
-                    <p>Time: 6:00PM - 9:00PM</p>
+            <h2 class="section-title elegant-title" data-aos="fade-up">Celebration of Life</h2>
+            <div class="decorative-divider">
+                <span class="divider-ornament">❦</span>
+            </div>
+            
+            <div class="program-card" data-aos="fade-up" data-aos-delay="100">
+                <!-- Program Header with decorative elements -->
+                <div class="program-header-wrapper">
+                    <div class="corner-ornament top-left"></div>
+                    <div class="corner-ornament top-right"></div>
+                    <div class="program-header">
+                        <h3>Burial Service</h3>
+                        <div class="date-label">Friday, 2nd May 2025</div>
+                        <div class="venue-info">
+                            <i class="fas fa-church venue-icon"></i>
+                            <p>Elim City - The Shed, Opposite VIP Station, Sunyani, Ghana</p>
+                        </div>
+                        <div class="time-details">
+                            <div class="time-item">
+                                <i class="far fa-clock"></i>
+                                <span>Viewing: 6:00 a.m. - 8:30 a.m.</span>
+                            </div>
+                            <div class="time-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Service: 9:00 a.m.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="corner-ornament bottom-left"></div>
+                    <div class="corner-ornament bottom-right"></div>
                 </div>
                 
-                <div class="program-item" data-aos="fade-up" data-aos-delay="150">
-                    <span>Welcome</span>
-                    <p>Purpose of Gathering</p>
+                <!-- Officiating Minister Section -->
+                <div class="officiating-minister" data-aos="fade-up" data-aos-delay="150">
+                    <div class="minister-label">Officiating Minister</div>
+                    <div class="minister-name">Dr. Gospel Odame-Kentoe</div>
+                    <div class="minister-title">Lead Pastor - Elim City</div>
+                    <div class="minister-decoration">
+                        <i class="fas fa-cross"></i>
+                    </div>
                 </div>
                 
-                <div class="program-item" data-aos="fade-up" data-aos-delay="200">
-                    <span>Opening Prayer</span>
-                    <p></p>
+                <!-- Order of Service Header -->
+                <div class="section-heading" data-aos="fade-up" data-aos-delay="200">
+                    <div class="heading-line"></div>
+                    <h3>Order of Service</h3>
+                    <div class="heading-line"></div>
                 </div>
                 
-                <div class="program-item" data-aos="fade-up" data-aos-delay="250">
-                    <span>Songs of Praise</span>
-                    <p></p>
+                <!-- Service Program Items - Main Column Layout -->
+                <div class="program-items-grid" data-aos="fade-up" data-aos-delay="250">
+                    <div class="program-column">
+                        <div class="program-item">
+                            <div class="item-number">1</div>
+                            <div class="item-content">
+                                <p>Introductory words & Prayer</p>
+                            </div>
+                        </div>
+                        
+                        <div class="program-item">
+                            <div class="item-number">2</div>
+                            <div class="item-content">
+                                <p>Hymn - It is well with my soul</p>
+                            </div>
+                        </div>
+                        
+                        <div class="program-item">
+                            <div class="item-number">3</div>
+                            <div class="item-content">
+                                <p>Praise & Worship</p>
+                            </div>
+                        </div>
+                        
+                        <div class="program-item">
+                            <div class="item-number">4</div>
+                            <div class="item-content">
+                                <p>Welcoming of Guests</p>
+                            </div>
+                        </div>
+                        
+                        <div class="program-item">
+                            <div class="item-number">5</div>
+                            <div class="item-content">
+                                <p>Bible Readings: [1st & 2nd]</p>
+                            </div>
+                        </div>
+                        
+                        <div class="program-item">
+                            <div class="item-number">6</div>
+                            <div class="item-content">
+                                <p>Song Ministration (1st)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="program-item">
+                            <div class="item-number">7</div>
+                            <div class="item-content">
+                                <p>Eulogy - Family</p>
+                            </div>
+                        </div>
+                        
+                        <div class="program-item">
+                            <div class="item-number">8</div>
+                            <div class="item-content">
+                                <p>Tributes - [Husband / Children / VRA / Elim City / Video]</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-column">
+                        <div class="program-item">
+                            <div class="item-number">9</div>
+                            <div class="item-content">
+                                <p>Offering (1st)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="program-item">
+                            <div class="item-number">10</div>
+                            <div class="item-content">
+                                <p>Song Ministration (2nd)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="program-item">
+                            <div class="item-number">11</div>
+                            <div class="item-content">
+                                <p>Sermon</p>
+                            </div>
+                        </div>
+                        
+                        <div class="program-item">
+                            <div class="item-number">12</div>
+                            <div class="item-content">
+                                <p>Offering (2nd)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="program-item">
+                            <div class="item-number">13</div>
+                            <div class="item-content">
+                                <p>Prayer for Family</p>
+                            </div>
+                        </div>
+                        
+                        <div class="program-item">
+                            <div class="item-number">14</div>
+                            <div class="item-content">
+                                <p>Funeral Information</p>
+                            </div>
+                        </div>
+                        
+                        <div class="program-item">
+                            <div class="item-number">15</div>
+                            <div class="item-content">
+                                <p>Closing Song - Goodness of God (All my life)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="program-item">
+                            <div class="item-number">16</div>
+                            <div class="item-content">
+                                <p>Prayer and Benediction</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="program-item" data-aos="fade-up" data-aos-delay="300">
-                    <span>Introductions</span>
-                    <p>Clergy/Ministers Present</p>
+                <!-- Graveside Section Header -->
+                <div class="section-heading graveside-heading" data-aos="fade-up" data-aos-delay="300">
+                    <div class="heading-line"></div>
+                    <h3>Graveside (The Committal)</h3>
+                    <div class="heading-line"></div>
                 </div>
                 
-                <div class="program-item" data-aos="fade-up" data-aos-delay="350">
-                    <span>Bible Reading</span>
-                    <p>1 Thessalonians 4:13-18 (NKJV/NLT)</p>
+                <!-- Graveside Program Items -->
+                <div class="graveside-items" data-aos="fade-up" data-aos-delay="350">
+                    <div class="program-item">
+                        <div class="item-number">1</div>
+                        <div class="item-content">
+                            <p>Song - Me te asea, me te ma wo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="program-item">
+                        <div class="item-number">2</div>
+                        <div class="item-content">
+                            <p>Introductory Words</p>
+                        </div>
+                    </div>
+                    
+                    <div class="program-item">
+                        <div class="item-number">3</div>
+                        <div class="item-content">
+                            <p>Chorus - "Because He lives."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="program-item">
+                        <div class="item-number">4</div>
+                        <div class="item-content">
+                            <p>Words Of Committal</p>
+                        </div>
+                    </div>
+                    
+                    <div class="program-item">
+                        <div class="item-number">5</div>
+                        <div class="item-content">
+                            <p>Laying of Wreaths</p>
+                        </div>
+                    </div>
+                    
+                    <div class="program-item">
+                        <div class="item-number">6</div>
+                        <div class="item-content">
+                            <p>Prayer & Benediction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enhanced Hymn Section -->
+            <div class="hymn-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="hymn-header">
+                    <i class="fas fa-music hymn-icon"></i>
+                    <h3>It is Well with My Soul</h3>
                 </div>
                 
-                <div class="program-item" data-aos="fade-up" data-aos-delay="400">
-                    <span>Biography</span>
-                    <p></p>
-                </div>
-                
-                <div class="program-item" data-aos="fade-up" data-aos-delay="450">
-                    <span>Tributes</span>
-                    <p>By Family</p>
-                </div>
-                
-                <div class="program-item" data-aos="fade-up" data-aos-delay="500">
-                    <span>Tributes</span>
-                    <p>By Church & Friends</p>
-                </div>
-                
-                <div class="program-item" data-aos="fade-up" data-aos-delay="550">
-                    <span>Song</span>
-                    <p></p>
-                </div>
-                
-                <div class="program-item" data-aos="fade-up" data-aos-delay="600">
-                    <span>Exhortation</span>
-                    <p></p>
-                </div>
-                
-                <div class="program-item" data-aos="fade-up" data-aos-delay="650">
-                    <span>Prayer for Family</span>
-                    <p></p>
-                </div>
-                
-                <div class="program-item" data-aos="fade-up" data-aos-delay="700">
-                    <span>Announcements</span>
-                    <p>& Donation Presentations</p>
-                </div>
-                
-                <div class="program-item" data-aos="fade-up" data-aos-delay="750">
-                    <span>Appreciations</span>
-                    <p></p>
-                </div>
-                
-                <div class="program-item" data-aos="fade-up" data-aos-delay="800">
-                    <span>Closing Prayer</span>
-                    <p>& Blessings</p>
-                </div>
-                
-                <div class="program-item" data-aos="fade-up" data-aos-delay="850">
-                    <span>Refreshments</span>
-                    <p></p>
+                <div class="hymn-content">
+                    <div class="hymn-verse">
+                        <div class="verse-number">1</div>
+                        <div class="verse-text">
+                            <p>When peace like a river attendeth my way,<br>
+                            When sorrows like sea billows roll;<br>
+                            Whatever my lot, thou hast taught me to say,<br>
+                            It is well, it is well, with my soul.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hymn-chorus">
+                        <div class="chorus-label">Chorus:</div>
+                        <div class="chorus-text">
+                            <p>It is well <span class="echo">(it is well)</span><br>
+                            With my soul <span class="echo">(with my soul)</span><br>
+                            It is well, it is well with my soul</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hymn-verse">
+                        <div class="verse-number">2</div>
+                        <div class="verse-text">
+                            <p>Though Satan should buffet, though trials should come,<br>
+                            Let this blest assurance control,<br>
+                            That Christ has regarded my helpless estate,<br>
+                            And hath shed His own blood for my soul.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hymn-verse">
+                        <div class="verse-number">3</div>
+                        <div class="verse-text">
+                            <p>My sin, oh, the bliss of this glorious thought!<br>
+                            My sin, not in part but the whole,<br>
+                            Is nailed to the cross, and I bear it no more,<br>
+                            Praise the Lord, praise the Lord, O my soul!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2816,145 +5049,173 @@
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Tributes</h2>
             <span class="ornament">❧</span>
-            
 
-        <!-- Daughter's Tribute Section -->
-        <div class="tribute-card daughter-tribute" data-aos="fade-up">
-            <div class="tribute-header">
-                <span class="tribute-icon"><i class="fas fa-heart"></i></span>
-                <h3>TRIBUTE BY DAUGHTER</h3>
-                <span class="quote-icon"><i class="fas fa-quote-left"></i></span>
-            </div>
-            <div class="tribute-content">
-                <div class="featured-quote">
-                    <p>"Those who live in the shelter of the Most High will find rest in the shadow of the Almighty." <span class="quote-source">— Psalm 91:1 (NLT)</span></p>
-                </div>
-                
-                <p class="tribute-intro">I want to thank you all for coming to celebrate the life of my mum with us today.</p>
-                
-                <div class="tribute-paragraphs">
-                    <div class="read-more-content" id="tribute-daughter">
-                        <p>Maa, this was your favourite bible verse. You loved the Lord and loved spending time in his presence. Never did you miss a church gathering or anything related to God's work. You raised us on God's word. Each morning at 5:30am without fail, you will come knocking on our doors for morning devotion. You shared testimonies about the countless times in your life the Lord brought angels your way to assist you so you never took God or His things for granted. You influenced us with the desire to pursue a godly life and encouraged us to trust the Lord always.</p>
-                        
-                        <div class="tribute-highlight">
-                            <p>You were a fierce guardian and a gentle guide who always steered us towards growth and improvement.</p>
-                        </div>
-                        
-                        <p>You had a strong belief in our potential and always encouraged us to strive for excellence. You instilled in us a drive to be the best version of ourselves. I remember when I was about to write my BECE, you noticed that I wasn't studying as I should. You sat me down and asked me about my ambitions for life. We had a long chat and you advise me that without studying, I wouldn't be able to achieve those ambitions. That was the turning point for me.</p>
-                        
-                        <p>You always gave us the confidence that we could achieve anything we set our minds to do. You encouraged us to take every opportunity that came our way and make great things out of them. I wouldn't be where I am now if it wasn't for your consistent love and support. You were my biggest cheerleader.</p>
-                        
-                        <p>When I was finishing uni, I discussed with you about my desire to join you in the UK. You did everything possible to make it happen. As soon as I arrived, you got me involved in serving in the church. You recruited me into the accounts team so I can replace you when you leave for Ghana. When it was time to leave after your studies, you cared so much about my wellbeing in a foreign land that you told so many people to look after me.</p>
-                        
-                        <div class="tribute-highlight">
-                            <p>Your love for children was a testament to your endless compassion and desire to nurture and care for them.</p>
-                        </div>
-                        
-                        <p>You extended your love far beyond our small family. Your heart was so vast and so generous, that you never turned any child away. Your home was a haven to many. It was constantly filled with the laughter and chatter of children. Every child who crossed your path felt this warmth and longed to be around you. You gave birth to a few, but you nurtured a multitude and became a mother figure to so many.</p>
-                        
-                        <p>When we visited Ghana in August 2023, it made no sense to me why we all cried when it was time to say goodbye but It does now - It was the last time we were going to see and hug you. If l knew that was the last time, I would have hugged you even more tightly.</p>
-                        
-                        <p>Maa, you've left us too soon. Our hearts desire was for you to live a long life. As I look back at your accomplishments and the lives you have impacted, I can say that you lived your life to the full. I used to say to you that if I am able to achieve even a quarter of your life achievement's, I would consider myself successful. Maa, you have finished the race that was set for you by your maker. It's now time for you to rest beautifully in the shadows of the Almighty. We will strive to make you proud by continuing to build on the foundation you have laid so beautifully.</p>
-                        
-                        <div class="tribute-highlight final-highlight">
-                            <p>You may be gone, Maa but your spirit will forever light our paths and that of all those you empowered.</p>
-                        </div>
-                        
-                        <p>Many children will sing your praises for generations to come. I will miss our long chats especially the ones about your childhood struggles and how you rose above them all. I love you, Maa-more than words can say. You will be deeply missed, but never forgotten. May your beautiful soul rest in perfect peace till we meet again.</p>
-                    </div>
+
+        <!-- Widower's Tribute Section -->
+<div class="tribute-card widower-tribute" data-aos="fade-up">
+    <div class="tribute-header">
+        <div class="tribute-header-pattern"></div>
+        <div class="tribute-accent-line"></div>
+        <h3>TRIBUTE BY WIDOWER</h3>
+        <div class="scripture-quote">
+            <p>"Lord remind me how brief my time on earth will be, remind me that my days are numbered. How fleeting my life is"</p>
+            <span class="scripture-reference">— Psalm 39:4</span>
+        </div>
+    </div>
+    
+    <div class="tribute-content">
+        <div class="tribute-columns">
+            <div class="tribute-text-column">
+                <div class="read-more-content" id="tribute-widower">
+                    <p>The most difficult and excruciating job to undertake was to write and read the tribute of a dear one, who through thick and thin has been by my side all the forty years. The sudden death of Lucy cannot be comprehended and her memories would forever remain with us.</p>
                     
-                    <span class="read-more-toggle" data-target="tribute-daughter">
-                        Read Full Tribute <i class="fas fa-chevron-down"></i>
-                    </span>
+                    <p>We got married in our twenties and were full of life. What we are seeing today is thus a tragedy we never expected. Lucy was plain and frank in everything. She was fearless and never allowed anybody to take advantage of her. She was very meticulous in everything she pursued. The spirit I cannot do was not part of her life. Lucy was a caring wife and it was no wondered she enjoyed reading Proverbs 31, reflecting on the verse ten (10) which we used on our wedding card: "who can find a virtuous wife? For her worth is far above rubies".</p>
+                    
+                    <p>She combined effectively, her career, family life and spiritual life. She performed her normal office work with a sense of pride. She eschewed lateness to work and she was always the last to come home. It was no wonder she once took the best worker award during her working life. She was not self-centered but took interest in the ladies welfare issues. She encouraged the V. R. A ladies to study hard and make it to top positions.</p>
+                    
+                    <p>At home, Madam Lucy endeared herself to everybody. She opened her arms to all, both far and near. Food was always available on the table. No wonder, children found a perfect rest in her abode. Lucy was a disciplinarian across board. One has to rise up early in order not to be late for school, work or meeting. She never hesitated in using the cane if one deserved it. She was strong and stern.</p>
                 </div>
                 
-                <div class="tribute-signature">
-                    <p>With eternal love,<br>Hagar</p>
-                    <div class="signature-decoration">❦</div>
+                <span class="read-more-toggle" data-target="tribute-widower">
+                    Read More <i class="fas fa-chevron-down"></i>
+                </span>
+            </div>
+            
+            <div class="widower-photo-column">
+                <div class="widower-photo">
+                    <img src="crosby.jpg" alt="Husband of Rev. Mrs. Lucy Perbi-Nyarko" class="tribute-photo">
+                    <div class="photo-overlay"></div>
+                </div>
+                
+                <div class="spiritual-life-note">
+                    <h4>Spiritual Life</h4>
+                    <p>The Spiritual life of Madam Lucy was exemplary. She would always priorities matters of the Kingdom of God over hers. She participated fully in almost all church activities. She only absented herself when she was out of town. Every morning, she would have her quiet time and made sure everybody participated. She took it upon herself to provide morning devotion materials (our Daily Manna) for the household.</p>
+                    
+                    <p>Madam Lucy was circumspect in whatever she did and also avoided waste where necessary. Even though she was over sixty years, she made sure she dressed up well for all occations. Madam Lucy offered free counselling to all who came her way irrespective of their status. Madam Lucy was a strong pillar, organizer, advisor and a source of hope and inspiration to the family and beyond.</p>
+                    
+                    <p>Honestly, a mighty oak tree has fallen and "a man hole" has been created. The two families, the church and the macro-community have lost a gem, a real gem indeed.</p>
                 </div>
             </div>
         </div>
-
-        <!-- Son-in-Law Tribute -->
-        <div class="tribute-card son-in-law-tribute" data-aos="fade-up">
-            <div class="tribute-header">
-                <div class="tribute-header-overlay"></div>
-                <span class="tribute-icon"><i class="fas fa-user-tie"></i></span>
-                <h3>TRIBUTE BY SON-IN-LAW</h3>
-                <span class="quote-icon"><i class="fas fa-quote-right"></i></span>
+        
+        <div class="widower-continued" data-aos="fade-up" data-aos-delay="200">
+            <p>Currently, the wounds within me would take a longer period to heal. I am completely shattered by Lucy's impromptu demise. The load over my head would weigh me down and only our Creator can intervene. The most painful aspect of Lucy's departure which will continue to remain with me forever is the fact that ALL HER LABOUR ON EARTH HAS COME TO NAUGHT.</p>
+            
+            <div class="final-message">
+                <p>This was her final message to me as her husband: <span class="final-quote">"Kwaku, this is the time I should have been resting and enjoying life, but here am I".</span> Lucy, you have left an indelible mark in our lives. You will never be forgotten as your good deeds and hard works echoe your unique character.</p>
             </div>
-            <div class="tribute-content">
-                <div class="son-in-law-intro">
-                    <p><span class="first-letter">M</span>ama Lucy, as you are affectionately called; I encountered you about 20 years ago when I presented myself and asked to marry your daughter Hagar.</p>
+            
+            <div class="hymn-quote">
+                <p class="quote-intro">I will end with some quote from the MHB 976.</p>
+                <div class="quote-text">
+                    <p>"Now the labourers task is over,<br>
+                    Now the battle-day is past,<br>
+                    Now upon the farther shore<br>
+                    Lands the voyage at last<br>
+                    Father in thy gracious keeping<br>
+                    Leave me now thy servant sleeping"</p>
+                    
+                    <p>Fare thee well Mama<br>
+                    Fare thee well Lucy<br>
+                    Fare thee well Rev.<br>
+                    You have fought gallantly. Ayekoo</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tribute-signature">
+            <p>With deep love and fond memories,</p>
+            <p class="signatory">Crosby Perbi Nyarko</p>
+            <p class="relationship">(Husband)</p>
+        </div>
+    </div>
+</div>
+            
+
+<!-- Children's Tribute Section - Enhanced Aesthetic Design -->
+<div class="tribute-card children-tribute" data-aos="fade-up">
+    <div class="tribute-header">
+        <div class="tribute-header-pattern"></div>
+        <div class="tribute-accent-line"></div>
+        <h3>TRIBUTE BY</h3>
+        <div class="children-title">
+            <h4>CHILDREN</h4>
+        </div>
+        <div class="heart-decoration">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+    </div>
+    
+    <div class="tribute-content">
+        <div class="children-salutation">
+            <p>Our Dearest Mum</p>
+        </div>
+        
+        <div class="children-tribute-text">
+            <div class="read-more-content" id="tribute-children">
+                <p>We struggle to fully understand the impact you had on our lives. You were a source of love, a fierce guardian, and a gentle guide who always steered us towards growth and improvement. Your love was a constant, a warm and comforting presence that shaped who we are.</p>
+                
+                <div class="tribute-divider">
+                    <span class="divider-ornament"><i class="fas fa-dove"></i></span>
                 </div>
                 
-                <div class="tribute-paragraphs">
-                    <div class="read-more-content" id="tribute-son-in-law">
-                        <p>At the time you had just left London for Ghana so this meeting was not in person. However, I immediately sensed and experienced your dedication to family, pragmatism and the fact that you believed that if something has to be done, it must be done well.</p>
-                        
-                        <p>The subsequent meetings and 'interviews' and background checks with Pastor Gospel, in whose care you had left your daughter, made it clear to me that you wouldn't just accept and take anyone as a son-in-law just for the sake of it. When I finally met you in Accra some months after we got married, I had a confirmation of the thoughts I had about you, and you sealed it with a warm and a gentle welcome.</p>
-                        
-                        <div class="tribute-memory">
-                            <div class="memory-icon"><i class="fas fa-heart"></i></div>
-                            <p>You talked with me as a son, explaining and showing me how to navigate through marriage life. You made me feel at ease and comfortable. At this time my anx and nerves of meeting my mother-in-law the first time fell off. You made me feel like I were your own son and I felt comfortable with you as I would my own mum. From here on our relationship would be better described as mother and son.</p>
-                        </div>
-                        
-                        <p>This encounter with you gave me a practical understanding when my mum, siblings, uncles and other family members tell me that you are a warm-hearted person who treats them exceptionally well and make them feel special anytime they meet with you. Mama Lucy, you cared not only for me but also everyone I cared about.</p>
-                        
-                        <p>When I visited your home in Sunyani, to my surprise, I saw a portrait of myself in your living room. I stood in a careful silent gaze of my portrait to make sure it was really me.</p>
-                        
-                        <p>And you placed it amongst the portraits of people who are dear to your heart. I did make a gracious comment on seeing my portrait but what I did not reveal was how chaffed I was, and how surprised I was with the confidence you had in seeing my photo perhaps several times every day in your home. I thought to myself this lady might have seen something in me that I have probably not seen.</p>
-                        
-                        <div class="tribute-memory">
-                            <div class="memory-icon"><i class="fas fa-home"></i></div>
-                            <p>During our recent visit to Ghana, you left your busy schedule to meet us in Accra, spent some days with us, before accompanying us to Kumasi and then welcoming us to your home in Sunyani. You gave me your own private car to move around with. You introduced me to any family and friends you could find. You practically showed me everywhere I know in Sunyani.</p>
-                        </div>
-                        
-                        <p>One of the many memories of you that has stuck with me is when I got sick in Ghana and couldn't eat, You prepared for me your special potent pepper soup that took away my flu and restored my appetite. And I'm glad to say that since then I haven't had any of such symptoms again.</p>
-                        
-                        <p>Your heart was so big, it had a place for all. I remember when we organised a birthday party for Josh, Priscilla and Linda. After the food was set and everyone was getting ready to enjoy, you took your car and excused everyone saying you'll be back soon. You did come back soon, but you didn't come alone. You brought with you many children, from where, nobody knew, to come to join in and enjoy the party. Everyone asked you where you had brought the children from. These children were not part of your own family but you graciously thought about them to bring some happiness to their lives. You showed us what a generous person you were. Whilst all of us were thinking about ourselves, focusing on how we were going to enjoy ourselves, you were thinking of other children you felt needed some much love and delicious food.</p>
-                        
-                        <div class="tribute-highlight">
-                            <p>You were really a mother to many and a mother to all.</p>
-                        </div>
-                        
-                        <p>You truly loved God and served Him well with all dedication and diligence. This translated to the love you had for all manner of people. You inspired me and my family by your constant prayers, pieces of advice and lessons from your own life and experiences. Anytime we spoke with you, you would ask Michelle and Josh about their progress in school and encouraged them to work harder and smarter to become the great people God has made them to be. You would say this would make you proud.</p>
-                        
-                        <p>Your attitude to hard work, business and excellence was a quality we will continue to cherish.</p>
-                        
-                        <div class="tribute-memory">
-                            <div class="memory-icon"><i class="fas fa-child"></i></div>
-                            <p>In our short stay with you, you had unconsciously inspired Josh with your passion, enthusiasm and instruction in business that he was very happy to stay behind in Ghana to continue to do business with you. Even at the airport, on our return, he pleaded with us to allow him to go back and help you with your businesses.</p>
-                        </div>
-                        
-                        <p>And when we returned to England, he will occasionally call you to ask how the business is going. You would take your time to teach and explain to him what has been going on in the business during the past few weeks.</p>
-                        
-                        <p>Mama Lucy, you have left a lasting legacy. Not just in the physical but also the intangibles, in your children, family, the church and in all you encountered. This means that even though you are no more here with us. You still live on through the impact you have had in the lives of many people you influenced.</p>
-                        
-                        <p>Mama Lucy, you have lived a good and a fulfilling life. All of us would have loved for you to live much longer on earth than you did. But we acknowledge the sovereignty of God and the fact that He has much better plans for you and for us so we won't argue with Him on this.</p>
-                        
-                        <div class="tribute-highlight final-message">
-                            <p>You loved and treated me like a son. I love and regard you as my mum. You will forever remain in my heart.</p>
-                        </div>
-                        
-                        <p>We have lost you, and it saddens our hearts. But heaven has gained you. It is also your gain because you are in a far better place. For this we are glad, and we hope in the promise of our Lord Jesus Christ who says we, who believe in Him and have trusted Him for eternal life will live, even though we die. This great promise is true for you, for us and all those who will believe and trust Jesus for their eternal salvation.</p>
-                        
-                        <p>Maa Lucy, you have gone ahead of us. Rest well with the Lord till we meet again.</p>
-                    </div>
-                    
-                    <span class="read-more-toggle" data-target="tribute-son-in-law">
-                        Read Full Tribute <i class="fas fa-chevron-down"></i>
-                    </span>
+                <p>You influenced us with a desire for all things godly. Never did you miss a church gathering or anything related to ministry. Your relentless love for God is the reason we haven't strayed so far from him. You always made sure we do not put our trust in any other god but Yaweh.</p>
+                
+                <p>You had a strong belief in our potential, always encouraging us to strive for excellence and to stand out in everything we did. You instilled in us a drive to be our best, a confidence that we could achieve anything we set our minds to. Your support was our bedrock, the force that propelled us to move forward in life.</p>
+                
+                <p>Even in your final moments, your thoughts were for us, for the legacy you had so beautifully built. You were still focused on ensuring we continued to succeed, to make our mark wherever we go. This selfless dedication is a testament to the extraordinary woman you were.</p>
+                
+                <div class="tribute-divider">
+                    <span class="divider-ornament"><i class="fas fa-heart"></i></span>
                 </div>
-                    
-                    <div class="tribute-signature">
-                        <p>With eternal gratitude and love,<br>Michael</p>
-                        <div class="signature-icon">
-                            <i class="fas fa-infinity"></i>
-                        </div>
+                
+                <p>But your love extended far beyond the small family. Your heart was so vast, so generous, that you never turned a child away. Your home was a haven, constantly filled with laughter and the happy chatter of children. Every child who crossed your path felt the warmth of your embrace and longed for your presence. You may have given birth to a few, but you nurtured a multitude, becoming a mother figure to so many. Your love for children was a testament to your compassion and your desire to care for all.</p>
+                
+                <div class="tribute-highlight">
+                    <p>We will carry your love, your strength, and your belief in us, and in the potential of every child, in our hearts forever. Your legacy of love, protection, the pursuit of excellence, and your incredible capacity to cater for us all live on through us and through the countless lives you touched.</p>
+                </div>
+                
+                <p>We will strive to make you proud, to continue building upon the foundation you laid with devotion. You may be gone, but your spirit will forever light our paths and the paths of all those you empowered. We love you, Mum, more than words can say. You will be deeply missed, but never forgotten.</p>
+                
+                <div class="scripture-meditation">
+                    <p class="meditation-intro">As we brood on your favorite verse,</p>
+                    <div class="scripture-text">
+                        <p>"He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty."</p>
                     </div>
+                    <p class="meditation-conclusion">we believe you are resting beautifully in the bosom of our Lord, safe and sound.</p>
+                </div>
+                
+                <p class="final-echo">Your love will echo in the laughter of children for generations to come.</p>
+            </div>
+            
+            <span class="read-more-toggle" data-target="tribute-children">
+                Read Full Tribute <i class="fas fa-chevron-down"></i>
+            </span>
+        </div>
+        
+        <div class="children-memory-frame">
+            <div class="frame-border">
+                <div class="memory-content">
+                    <div class="memory-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>Mum, your arms were always open when we needed a hug. Your heart was always full of love. Your hands were always busy caring for everyone around you. Thank you for being our first teacher, our strongest advocate, and our most devoted friend.</p>
+                    <div class="memory-icon-end"><i class="fas fa-quote-right"></i></div>
                 </div>
             </div>
+        </div>
+        
+        <div class="tribute-signature">
+            <p>With eternal love and gratitude,</p>
+            <p class="signatory">Your Children</p>
+            <div class="children-handprints">
+                <span class="handprint"><i class="fas fa-hand-paper"></i></span>
+                <span class="handprint small"><i class="fas fa-hand-paper"></i></span>
+                <span class="handprint smaller"><i class="fas fa-hand-paper"></i></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+       
 
             <!-- Grandson's Tribute -->
             <div class="tribute-card grandson-tribute" data-aos="fade-up">
@@ -3066,6 +5327,194 @@
                 </div>
             </div>
 
+            <!-- VRA Retired Employees Association Tribute Section -->
+<div class="tribute-card vra-tribute" data-aos="fade-up">
+    <div class="tribute-header">
+        <div class="tribute-header-overlay"></div>
+        <div class="vra-logo-container">
+            <div class="vra-logo-placeholder">
+                <i class="fas fa-bolt"></i>
+            </div>
+        </div>
+        <h3>TRIBUTE BY</h3>
+        <div class="vra-title">
+            <h4>VRA. RETIRED EMPLOYEES</h4>
+            <h4>ASSOCIATION, SUNYANI BRANCH.</h4>
+        </div>
+    </div>
+    
+    <div class="tribute-content">
+        <div class="vra-opening-poem">
+            <p>Unto us a leader was given.<br>
+            Unto us a friend was bestowed.<br>
+            But today she is no more.<br>
+            How else shall we remember her?</p>
+        </div>
+        
+        <div class="scripture-block">
+            <p>"Everything that happens in this world happens at the time God chooses. He sets the time for birth and the time for death. The time for planting and the time for pulling up"</p>
+            <span class="scripture-source">— Ecclesiastes 3:1-2</span>
+        </div>
+        
+        <div class="read-more-content" id="tribute-vra">
+            <p>Mrs Lucy Perbi-Nkyarko, our sister, mother, auntie, friend and wife has joined the silent majority in heaven. She was generous and great. She sacrificed her time, resources, heart, indeed her all for her family and friends.</p>
+            
+            <p>You were socially engaged and made friends with people from all walks of life on matter the status of the person. You were a mother to all and your motherly love, care, protection and counselling were not only limited to your children but to outsiders as well. You were so full of life, lived your life to the fullest. Mother Lucy, you were a cheerful giver. Your death has come as a shock and we deem it early and untimely.</p>
+            
+            <p>We are compelled to hold back our tears. However, our memories of you cannot disappear.</p>
+            
+            <p>Madam Lucy went through the dimensions of life, length of life measured by birthdays/age, she lived "Three score and seven (67 years) three years short of which the Bible speaks about Psalm 90:10.</p>
+            
+            <p>In life we need to leave our marks on families and communities which she did. She made her life deeper and meaningful by serving God and humankind – the two purposes of life. She was a dedicated and cherished member of VRA-Retired Employees Association, Sunyani Branch. Besides, she was also an executive member, precisely the treasure for years.</p>
+            
+            <p>Madam Lucy kept the accounting books well and was very transparent in all her dealings.</p>
+            
+            <p>Her unwavering commitment in showing love, care and kindness left an indelible mark in the hearts of many people.</p>
+            
+            <p>Mrs Lucy Perbi-Nyarko was a fiercely independent minded person who could not be easily brushed off. As a very sought for type of person, she assumed many leadership positions in VRA/NEDCo as area Manager in Bolga and in numerous Associations.</p>
+            
+            <p>She was not only society-centred but also development oriented person. Madam Lucy was someone who spent her energies and lived unselfishly, amicably and actively. Her influence among her associates was impactful.</p>
+            
+            <p>Her relationship with her family was very warm, amicable and harmonious. Health wise, she was a strong lady, hardly heard of her sickness but for her few ill-health in a couple of years, she was not bed-ridden.</p>
+            
+            <p>She treated her few sicknesses with respect by not ignoring them. Anytime she saw symptoms she sought medical attention. A case in point was when she was not feeling well, she travelled to Tamale, referred to Akosombo Hospital, thereof to Korle-Bu Hospital for treatment.</p>
+            
+            <div class="vra-closing">
+                <p>We have lost an honest friend, a precious gift.</p>
+                <p>May her soul rest in perfect peace.</p>
+            </div>
+        </div>
+        
+        <span class="read-more-toggle" data-target="tribute-vra">
+            Read Full Tribute <i class="fas fa-chevron-down"></i>
+        </span>
+        
+        <div class="tribute-signature">
+            <div class="signature-line"></div>
+            <p>With deep appreciation and fond memories,</p>
+            <p class="signatory">VRA Retired Employees Association</p>
+            <p class="sub-signatory">Sunyani Branch</p>
+            <div class="vra-emblem">
+                <i class="fas fa-bolt"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sunyani Technical University Alumni Tribute Section -->
+<div class="tribute-card stu-tribute" data-aos="fade-up">
+    <div class="tribute-header">
+        <div class="tribute-header-overlay"></div>
+        <div class="stu-emblem">
+            <div class="stu-logo-placeholder">
+                <i class="fas fa-university"></i>
+            </div>
+        </div>
+        <h3>TRIBUTE BY</h3>
+        <div class="stu-title">
+            <h4>SUNYANI TECHNICAL UNIVERSITY</h4>
+            <h4>ALUMNI</h4>
+        </div>
+    </div>
+    
+    <div class="tribute-content">
+        <div class="scripture-citation">
+            <p>"Then I heard a voice from heaven say, 'write this: Blessed are the dead who die in the Lord from now on.' 'Yes,' says the spirit, 'they will rest from their labour, for their deeds will follow them."</p>
+            <span class="scripture-source">(Revelations 14: 13)</span>
+        </div>
+        
+        <div class="stu-tribute-content">
+            <div class="tribute-first-letter">T</div>
+            <div class="read-more-content" id="tribute-stu">
+                <p>he Late Lucy Osei Afari as she was called during her days at the then Sunyani Technical Institute (SUTECH), enrolled in 1974, and pursued Business Studies. Her course mates will attest to the fact that she was brilliantly endowed with knowledge and excellence and among the top students in all the subjects.</p>
+                
+                <p>Though, an excellent and all round student, she was very humble (down to earth), and was always ready to teach and offer assistance to everyone who had difficulty in any of their subjects. Due to her exceptional brilliance she was very popular in our school days.</p>
+                
+                <p>Afia was also a devout Christian and a member of the Scripture Union (SU) and her passion and commitment was so immersed that she was elected the President of the Union in her final year at the School.</p>
+                
+                <p>Mama Luu, as she was affectionately called by Alumni members, finally joined the Alumni in 2016 after a long wait due to her workload as a result of occupying various positions in the Northern Electricity Distribution Company (NEDCO). Her commitment and dedication to the Association was immeasurable despite her position at that time as the Bolgatanga Regional Manager of NEDCO, and so when the association decided to organize the Formal Maiden Homecoming in 2017, she was selected as the Chairperson of the Homecoming Committee. Through her leadership qualities, acquaintances, rapport, and strong networks, the committee was able to reach out to a lot of SUTECHIANS all over the globe and the response was so massive. It was therefore not surprising that that forum gave birth to the Global STU Alumni which we celebrate today as the Umbrella Body of this Noble Association.</p>
+                
+                <p>Again, last year (2024) when the elders of the Association decided to carve out the town members from the campus members due to the mode of operation of the two groups, Mama Luu was charged to lead and with the support of others in record time (that is within three months) had mobilised the town members to a formidable and vibrant group with a developed Constitution and the group known as the Sunyani Town Chapter of STU Alumni. She devoted a greater part of her retirement time for the organisation such that within the space, members of the association presence at various ceremonies, especially funerals and other events were unimaginable.</p>
+                
+                <p>It was on one of these ceremonies, a one week funeral observation at Odumase on Sunday 12th January, 2025 that we recognized that Mama Lucy on that day was not of her usual self because she could not perform her role as the announcer on behalf of the Alumni and passed on to another person.</p>
+                
+                <p>That very evening after our Alumni meeting, she confided in some of the Alumni Executives that she was not feeling well and that she wants to seek medical attention from her doctor in Tamale. Little did we know that it would be the last time of seeing our dear sister.</p>
+                
+                <p>During her stay at the hospital, some executive members of the Accra Chapter visited her and offered the best assistance for her successful operation. Even in her sick bed she was in high spirit and was urging Executive members to support whoever was holding the forth till her returned. It therefore came as a shock when the Alumni heard of her death.</p>
+                
+                <p>We have really lost a brilliant, dynamic and a devoted member of the Alumni. Today we pay tribute to Lucy Osei Afari and resolve to continue her good works to make the Sunyani Chapter of STU Alumni one of the best in Ghana and the whole world. We very much believe she had lived to the task and is waiting in Paradise until we meet on the day of Resurrection.</p>
+                
+                <div class="traditional-tribute">
+                    <p>Mama Luu eeeiih! Mama Luu eeeiih! Mama Luu eeeiih!</p>
+                    <p>damirifa due ooo, damirifa due oooo, damirifa due, due ne amane hunu.</p>
+                </div>
+            </div>
+        </div>
+        
+        <span class="read-more-toggle" data-target="tribute-stu">
+            Read Full Tribute <i class="fas fa-chevron-down"></i>
+        </span>
+        
+        <div class="tribute-signature">
+            <div class="signature-line"></div>
+            <p>With profound respect and gratitude,</p>
+            <p class="signatory">Sunyani Technical University Alumni</p>
+            <div class="stu-footer-emblem">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Ghana LPG Operators Association Tribute Section -->
+<div class="tribute-card glipgoa-tribute" data-aos="fade-up">
+    <div class="tribute-header">
+        <div class="tribute-header-overlay"></div>
+        <div class="glipgoa-logo-container">
+            <div class="glipgoa-logo">
+                <div class="glipgoa-circle-outer">
+                    <div class="glipgoa-circle-inner"></div>
+                </div>
+            </div>
+        </div>
+        <div class="glipgoa-title">
+            <h3>Ghana LPG Operators</h3>
+            <h3>Association (GLiPGOA)</h3>
+        </div>
+        <div class="accent-line"></div>
+    </div>
+    
+    <div class="tribute-content">
+        <div class="tribute-letter">
+            <div class="letter-initial">O</div>
+            <p>n behalf of the Ghana LPG Operators Association (GLiPGOA), we mourn the loss of our beloved National Treasurer, Madam Lucy Perbi-Nyarko, affectionately called "Madam Lucy" by members.</p>
+        </div>
+        
+        <div class="tribute-paragraphs">
+            <p>Your tireless efforts in managing our finances, attention to detail, and commitment to transparency earned you the respect and admiration of all. Your leadership and guidance helped shape our association into what it is today.</p>
+            
+            <p>We remember a dedicated and passionate leader who joined our industry in 2019. Her rise through the ranks was swift and well-deserved, becoming Regional Treasurer for the Bono Region in 2022. Her crowning achievement came in 2023, when she was nominated and voted as our National Treasurer at our congress in Takoradi, a position she held with distinction until her untimely passing.</p>
+            
+            <div class="tribute-message">
+                <p>Your dedication, integrity, and service to our organization will never be forgotten. May your memory inspire us to continue your good work. We extend our deepest condolences to your family and loved ones. May your memory be a blessing to us all.</p>
+                
+                <p class="farewell">Rest in peace, Madam Lucy.</p>
+            </div>
+        </div>
+        
+        <div class="tribute-signature">
+            <div class="signature-line"></div>
+            <p>With profound gratitude and respect,</p>
+            <p class="signatory">Ghana LPG Operators Association (GLiPGOA)</p>
+            <div class="signature-emblem">
+                <div class="mini-circle-outer">
+                    <div class="mini-circle-inner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
             <!-- Childhood Friend & Colleague Tribute -->
             <div class="tribute-card friend-tribute" data-aos="fade-up">
                 <div class="tribute-header">
@@ -3145,14 +5594,14 @@
             <h2 class="section-title" data-aos="fade-up">Service Location</h2>
             <span class="ornament">❧</span>
             <div class="location-details" data-aos="fade-up" data-aos-delay="100">
-                <p><i class="fas fa-church"></i> Christ Church Barnet</p>
-                <p><i class="fas fa-map-marker-alt"></i> St Albans Road, Barnet EN5 4LA</p>
-                <p><i class="fas fa-calendar-alt"></i> 12th April 2025</p>
-                <p><i class="fas fa-clock"></i> 6:00PM - 9:00PM</p>
-                <a href="https://maps.app.goo.gl/8ymzA8jM4LYdEBQo9?g_st=com.google.maps.preview.copy" target="_blank" class="btn" style="margin-top: 20px;"><i class="fas fa-map"></i> Get Directions</a>
+                <p><i class="fas fa-church"></i> Elim City - The Shed</p>
+                <p><i class="fas fa-map-marker-alt"></i> Opposite VIP Station, Sunyani, Ghana</p>
+                <p><i class="fas fa-calendar-alt"></i> 2nd May, 2025</p>
+                <p><i class="fas fa-clock"></i> 5:00AM - 11:00AM</p>
+                <a href="https://maps.app.goo.gl/3ZExKybapzMLBxBcA?g_st=com.google.maps.preview.copy" target="_blank" class="btn" style="margin-top: 20px;"><i class="fas fa-map"></i> Get Directions</a>
             </div>
             <div class="map-container" data-aos="zoom-in" data-aos-delay="200">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2474.3910481214246!2d-0.19819602406088392!3d51.650957471862365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761981c94afa85%3A0x624e599407d09a2d!2sChrist%20Church%2C%20St%20Albans%20Rd%2C%20Barnet%20EN5%204LA%2C%20UK!5e0!3m2!1sen!2sus!4v1712587173864!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.1462460644014!2d-2.337731090244213!3d7.334924813194092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb52c4e0b19d7d%3A0xf77e7bef90fdb0df!2sElim%20City%20-%20The%20Shed!5e0!3m2!1sen!2sus!4v1714584339889!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
