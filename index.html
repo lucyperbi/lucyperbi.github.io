@@ -4994,50 +4994,95 @@
         }
     }
 
-        /* Floating Donation Button Styling */
-        .floating-donation-container {
+    .floating-donation-container {
         position: fixed;
-        bottom: 30px;
-        right: 30px;
+        bottom: 25px;
+        right: 25px;
         z-index: 999;
     }
     
     .floating-donation-button {
         display: flex;
         align-items: center;
-        background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+        background: rgba(125, 90, 80, 0.85);
         color: var(--light-text);
-        padding: 12px 20px;
-        border-radius: 50px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        padding: 8px 15px;
+        border-radius: 30px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
         text-decoration: none;
         transition: all 0.3s ease;
-        border: 2px solid rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
+        font-size: 0.95rem;
     }
     
     .floating-donation-button:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        background: var(--accent-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         color: var(--light-text);
     }
     
     .donation-icon {
-        margin-right: 10px;
-        font-size: 1.2rem;
-        animation: pulse 1.5s infinite;
+        margin-right: 8px;
+        font-size: 0.9rem;
+        animation: gentlePulse 2s infinite;
     }
     
-    @keyframes pulse {
+    @keyframes gentlePulse {
         0% { transform: scale(1); }
-        50% { transform: scale(1.2); }
+        50% { transform: scale(1.1); }
         100% { transform: scale(1); }
     }
     
     .donation-text {
-        font-family: 'Playfair Display', serif;
-        font-size: 1.1rem;
-        font-weight: 600;
-        letter-spacing: 0.5px;
+        font-family: 'Lora', serif;
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+    }
+    
+    /* Optional: Add a hover state that temporarily shows more info */
+    .floating-donation-button::after {
+        content: 'Support the Family';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--primary-color);
+        border-radius: 30px;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        pointer-events: none;
+    }
+    
+    .floating-donation-button:hover::after {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .floating-donation-container {
+            bottom: 20px;
+            right: 20px;
+        }
+    }
+    
+    /* Alternative compact button for very small screens */
+    @media (max-width: 480px) {
+        .floating-donation-button {
+            padding: 8px 12px;
+        }
+        
+        .donation-text {
+            font-size: 0.85rem;
+        }
     }
     
    
@@ -6130,7 +6175,7 @@
 
     <!-- Floating Donation Button -->
     <div class="floating-donation-container">
-        <a href="#donation" class="floating-donation-button">
+        <a href="#donation" class="floating-donation-button" title="Support the Family">
             <span class="donation-icon"><i class="fas fa-heart"></i></span>
             <span class="donation-text">Donate</span>
         </a>
