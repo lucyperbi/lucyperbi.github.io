@@ -4521,6 +4521,478 @@
             font-size: 1rem;
         }
     }
+        /* Donation Section Styling */
+        .donation-section {
+        padding: 100px 0;
+        background-color: var(--background-color);
+        position: relative;
+    }
+    
+    .donation-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('b.jpg') center/cover no-repeat fixed;
+        opacity: 0.04;
+        z-index: 0;
+    }
+    
+    .donation-container {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .donation-inner {
+        background-color: var(--program-bg);
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .donation-header {
+        text-align: center;
+        padding: 50px 40px 30px;
+        position: relative;
+    }
+    
+    .donation-header::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(to right, var(--accent-color), var(--gold), var(--accent-color));
+        border-radius: 3px;
+    }
+    
+    .donation-icon-container {
+        margin-bottom: 25px;
+    }
+    
+    .donation-icon {
+        width: 90px;
+        height: 90px;
+        background: linear-gradient(135deg, var(--accent-color), var(--gold));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        box-shadow: 0 10px 20px rgba(229, 178, 153, 0.3);
+    }
+    
+    .donation-icon i {
+        font-size: 40px;
+        color: white;
+    }
+    
+    .donation-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+    
+    .donation-subtitle {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.3rem;
+        color: var(--accent-color);
+        font-style: italic;
+        margin-bottom: 0;
+    }
+    
+    .donation-content {
+        padding: 40px;
+    }
+    
+    .donation-message {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 40px;
+    }
+    
+    .donation-message p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-color);
+    }
+    
+    .donation-method {
+        margin: 40px 0;
+    }
+    
+    .method-card {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .method-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-accent {
+        width: 6px;
+        background: linear-gradient(to bottom, var(--accent-color), var(--gold));
+        border-radius: 3px 0 0 3px;
+    }
+    
+    .method-content {
+        flex: 1;
+        padding: 30px;
+        position: relative;
+    }
+    
+    .method-icon {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(229, 178, 153, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .method-icon i {
+        font-size: 24px;
+        color: var(--accent-color);
+    }
+    
+    .method-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+    
+    .method-details {
+        margin-top: 25px;
+    }
+    
+    .detail-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    
+    .detail-label {
+        font-weight: 600;
+        color: var(--primary-color);
+        width: 100px;
+        flex-shrink: 0;
+    }
+    
+    .detail-value {
+        font-size: 1.05rem;
+    }
+    
+    .number-display {
+        display: flex;
+        align-items: center;
+        background-color: rgba(252, 222, 192, 0.2);
+        padding: 10px 15px;
+        border-radius: 30px;
+    }
+    
+    .number-value {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+    
+    .copy-button {
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .copy-button:hover {
+        background-color: var(--primary-color);
+        transform: scale(1.05);
+    }
+    
+    .copy-confirmation {
+        position: absolute;
+        bottom: 15px;
+        right: 30px;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+    
+    .donation-note {
+        text-align: center;
+        margin: 35px 0;
+        padding: 0 20px;
+    }
+    
+    .donation-note p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: var(--text-color);
+    }
+    
+    .donation-quote {
+        background-color: rgba(252, 222, 192, 0.15);
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        position: relative;
+        margin: 40px 0;
+    }
+    
+    .quote-mark {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        color: var(--gold);
+        font-size: 1.8rem;
+        opacity: 0.5;
+    }
+    
+    .quote-mark.end {
+        top: auto;
+        left: auto;
+        right: 20px;
+        bottom: 15px;
+    }
+    
+    .donation-quote p {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3rem;
+        font-style: italic;
+        color: var(--primary-color);
+        line-height: 1.6;
+        margin: 0;
+    }
+    
+    .donation-footer {
+        padding: 25px 0;
+        background-color: rgba(252, 222, 192, 0.1);
+        text-align: center;
+    }
+    
+    .gratitude-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .gratitude-message p {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.2rem;
+        color: var(--primary-color);
+        font-style: italic;
+        margin: 0;
+    }
+    
+    .heart-icon {
+        color: var(--accent-color);
+        font-size: 1.1rem;
+        animation: pulse 1.5s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+    
+    .decoration-element {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        z-index: 0;
+    }
+    
+    .decoration-element.top-left {
+        top: 0;
+        left: 0;
+        border-top: 5px solid var(--gold);
+        border-left: 5px solid var(--gold);
+        border-radius: 15px 0 0 0;
+    }
+    
+    .decoration-element.top-right {
+        top: 0;
+        right: 0;
+        border-top: 5px solid var(--gold);
+        border-right: 5px solid var(--gold);
+        border-radius: 0 15px 0 0;
+    }
+    
+    .decoration-element.bottom-left {
+        bottom: 0;
+        left: 0;
+        border-bottom: 5px solid var(--gold);
+        border-left: 5px solid var(--gold);
+        border-radius: 0 0 0 15px;
+    }
+    
+    .decoration-element.bottom-right {
+        bottom: 0;
+        right: 0;
+        border-bottom: 5px solid var(--gold);
+        border-right: 5px solid var(--gold);
+        border-radius: 0 0 15px 0;
+    }
+    
+    @media (max-width: 992px) {
+        .donation-title {
+            font-size: 2.2rem;
+        }
+        
+        .donation-subtitle {
+            font-size: 1.2rem;
+        }
+        
+        .donation-content {
+            padding: 30px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .donation-section {
+            padding: 80px 0;
+        }
+        
+        .donation-header {
+            padding: 40px 30px 25px;
+        }
+        
+        .donation-icon {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .donation-icon i {
+            font-size: 34px;
+        }
+        
+        .donation-title {
+            font-size: 2rem;
+        }
+        
+        .method-content {
+            padding: 25px;
+        }
+        
+        .method-title {
+            font-size: 1.4rem;
+        }
+        
+        .donation-quote {
+            padding: 25px;
+        }
+        
+        .donation-quote p {
+            font-size: 1.2rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .donation-section {
+            padding: 60px 0;
+        }
+        
+        .donation-container {
+            padding: 15px;
+        }
+        
+        .donation-header {
+            padding: 35px 20px 20px;
+        }
+        
+        .donation-icon {
+            width: 70px;
+            height: 70px;
+        }
+        
+        .donation-icon i {
+            font-size: 30px;
+        }
+        
+        .donation-title {
+            font-size: 1.8rem;
+        }
+        
+        .donation-subtitle {
+            font-size: 1.1rem;
+        }
+        
+        .donation-content {
+            padding: 25px 20px;
+        }
+        
+        .donation-message p {
+            font-size: 1rem;
+        }
+        
+        .detail-row {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .detail-label {
+            width: auto;
+            margin-bottom: 5px;
+        }
+        
+        .number-display {
+            width: 100%;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        
+        .number-value {
+            font-size: 1.1rem;
+        }
+        
+        .donation-quote p {
+            font-size: 1.1rem;
+        }
+        
+        .decoration-element {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .gratitude-message p {
+            font-size: 1.1rem;
+        }
+    }
     </style>
 </head>
 <body>
@@ -5606,6 +6078,82 @@
         </div>
     </section>
 
+    <!-- Elegant Donation Section -->
+<section id="donation" class="donation-section">
+    <div class="container">
+        <div class="donation-container" data-aos="fade-up">
+            <div class="donation-inner">
+                <div class="donation-header">
+                    <div class="donation-icon-container">
+                        <div class="donation-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                    </div>
+                    <h2 class="donation-title">In Loving Support</h2>
+                    <p class="donation-subtitle">Your contribution honors her legacy</p>
+                </div>
+                
+                <div class="donation-content">
+                    <div class="donation-message">
+                        <p>As we celebrate the extraordinary life of Rev. Mrs. Lucy Perbi-Nyarko, many have asked how they might contribute in her memory. Your generous support will help honor her legacy and assist the family during this difficult time.</p>
+                    </div>
+                    
+                    <div class="donation-method">
+                        <div class="method-card">
+                            <div class="card-accent"></div>
+                            <div class="method-content">
+                                <div class="method-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h3 class="method-title">Mobile Money Donation</h3>
+                                <div class="method-details">
+                                    <div class="detail-row">
+                                        <span class="detail-label">Recipient:</span>
+                                        <span class="detail-value">Crosby Perbi Nyarko</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Number:</span>
+                                        <div class="number-display">
+                                            <span class="number-value">0598806617</span>
+                                            <button class="copy-button" id="copyMobileNumber" title="Copy to clipboard">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="copy-confirmation" id="copyConfirmation">Number copied!</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="donation-note">
+                        <p>Your support, whether through contributions or prayers, is deeply appreciated by the family. Every gesture of kindness helps preserve the beautiful legacy of love and service that Rev. Mrs. Lucy Perbi-Nyarko leaves behind.</p>
+                    </div>
+                    
+                    <div class="donation-quote">
+                        <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                        <p>The best way to honor a life well-lived is to continue the good works they began.</p>
+                        <div class="quote-mark end"><i class="fas fa-quote-right"></i></div>
+                    </div>
+                </div>
+                
+                <div class="donation-footer">
+                    <div class="gratitude-message">
+                        <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                        <p>Thank you for your kindness and generosity</p>
+                        <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="decoration-element top-left"></div>
+            <div class="decoration-element top-right"></div>
+            <div class="decoration-element bottom-left"></div>
+            <div class="decoration-element bottom-right"></div>
+        </div>
+    </div>
+</section>
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -5973,6 +6521,28 @@
             // Initialize the gallery
             initGallery();
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const copyButton = document.getElementById('copyMobileNumber');
+        const confirmation = document.getElementById('copyConfirmation');
+        
+        if (copyButton) {
+            copyButton.addEventListener('click', function() {
+                const numberValue = document.querySelector('.number-value').textContent;
+                navigator.clipboard.writeText(numberValue).then(function() {
+                    // Show confirmation
+                    confirmation.style.opacity = '1';
+                    confirmation.style.transform = 'translateY(0)';
+                    
+                    // Hide after 2 seconds
+                    setTimeout(function() {
+                        confirmation.style.opacity = '0';
+                        confirmation.style.transform = 'translateY(-10px)';
+                    }, 2000);
+                });
+            });
+        }
+    });
 
         
     </script>
