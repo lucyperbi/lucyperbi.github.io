@@ -5084,7 +5084,388 @@
             font-size: 0.85rem;
         }
     }
+    .floating-buttons-container {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
     
+    .floating-button {
+        display: flex;
+        align-items: center;
+        background: rgba(125, 90, 80, 0.85);
+        color: var(--light-text);
+        padding: 8px 15px;
+        border-radius: 30px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
+        font-size: 0.95rem;
+    }
+    
+    .floating-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        color: var(--light-text);
+    }
+    
+    .button-icon {
+        margin-right: 8px;
+        font-size: 0.9rem;
+    }
+    
+    .button-text {
+        font-family: 'Lora', serif;
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+    }
+    
+    .donation-button {
+        background: rgba(125, 90, 80, 0.85);
+    }
+    
+    .donation-button:hover {
+        background: var(--accent-color);
+    }
+    
+    .donation-button .button-icon {
+        animation: gentlePulse 2s infinite;
+    }
+    
+    @keyframes gentlePulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+    
+    .brochure-button {
+        background: rgba(0, 86, 145, 0.85);
+    }
+    
+    .brochure-button:hover {
+        background: rgba(0, 86, 145, 1);
+    }
+
+        /* Grandson's Tribute Styling - Using Original Website Colors */
+        .grandson-tribute {
+        margin-top: 60px;
+        background-color: var(--program-bg);
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        position: relative;
+    }
+    
+    .grandson-tribute::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background: linear-gradient(to right, var(--accent-color), var(--secondary-color), var(--accent-color));
+    }
+    
+    .grandson-tribute .tribute-header {
+        background: linear-gradient(to right, var(--primary-color), #4A3933);
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+    
+    .tribute-header-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px),
+            radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px);
+        background-size: 30px 30px;
+        background-position: 0 0, 15px 15px;
+        opacity: 0.3;
+    }
+    
+    .grandson-tribute .tribute-header h3 {
+        position: relative;
+        z-index: 2;
+        font-size: 2rem;
+        color: var(--light-text);
+        margin: 0;
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 1px;
+    }
+    
+    .grandson-hearts {
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 3;
+    }
+    
+    .grandson-hearts i {
+        color: var(--accent-color);
+        font-size: 1.2rem;
+    }
+    
+    .grandson-hearts i:nth-child(2) {
+        color: var(--secondary-color);
+        font-size: 1.5rem;
+    }
+    
+    .grandson-hearts i:nth-child(3) {
+        color: var(--accent-color);
+        font-size: 1.2rem;
+    }
+    
+    .grandson-tribute .tribute-content {
+        padding: 40px;
+        position: relative;
+    }
+    
+    .grandson-letter {
+        position: relative;
+        background-color: rgba(252, 222, 192, 0.05);
+        padding: 30px;
+        border-radius: 10px;
+        font-family: 'Lora', serif;
+    }
+    
+    .letter-heading {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        color: var(--primary-color);
+        margin-bottom: 25px;
+        font-weight: 600;
+        font-style: italic;
+    }
+    
+    .grandchildren-columns {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .column-left, .column-right {
+        flex: 1;
+    }
+    
+    .grandson-letter p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+        font-size: 1.05rem;
+        color: var(--text-color);
+    }
+    
+    .memory-box {
+        background-color: rgba(252, 222, 192, 0.15);
+        padding: 25px 25px 25px 60px;
+        margin: 30px 0;
+        border-radius: 8px;
+        position: relative;
+    }
+    
+    .memory-icon {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background-color: rgba(229, 178, 153, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+    }
+    
+    .scripture-box {
+        background-color: rgba(125, 90, 80, 0.05);
+        padding: 25px;
+        margin: 30px 0;
+        border-radius: 8px;
+        display: flex;
+        gap: 20px;
+    }
+    
+    .scripture-icon {
+        flex: 0 0 40px;
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 5px;
+    }
+    
+    .scripture-content {
+        flex: 1;
+    }
+    
+    .scripture-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+    
+    .scripture-meaning {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        margin-top: 15px;
+        color: var(--primary-color);
+    }
+    
+    .fly-high {
+        text-align: center;
+        margin: 40px 0 20px;
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        color: var(--primary-color);
+        font-size: 1.3rem;
+    }
+    
+    .fly-high p {
+        margin-bottom: 5px !important;
+    }
+    
+    .fly-high-icon {
+        margin-top: 15px;
+        font-size: 1.8rem;
+        color: var(--accent-color);
+        opacity: 0.8;
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+    
+    .grandson-tribute .tribute-signature {
+        margin-top: 30px;
+        text-align: right;
+        font-style: italic;
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-color);
+        font-size: 1.1rem;
+        padding-top: 15px;
+        border-top: 1px dashed rgba(229, 178, 153, 0.3);
+    }
+    
+    .signatory {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-top: 5px;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+        .grandchildren-columns {
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .column-left, .column-right {
+            width: 100%;
+        }
+        
+        .scripture-box {
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .scripture-icon {
+            text-align: center;
+            justify-content: flex-start;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .grandson-tribute .tribute-header h3 {
+            font-size: 1.8rem;
+        }
+        
+        .grandson-hearts i {
+            font-size: 1rem;
+        }
+        
+        .grandson-hearts i:nth-child(2) {
+            font-size: 1.2rem;
+        }
+        
+        .grandson-tribute .tribute-content {
+            padding: 30px;
+        }
+        
+        .grandson-letter {
+            padding: 25px 20px;
+        }
+        
+        .letter-heading {
+            font-size: 1.4rem;
+        }
+        
+        .memory-box {
+            padding: 20px 20px 20px 50px;
+        }
+        
+        .fly-high {
+            font-size: 1.2rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .grandson-tribute .tribute-header h3 {
+            font-size: 1.5rem;
+        }
+        
+        .grandson-tribute .tribute-content {
+            padding: 25px 20px;
+        }
+        
+        .grandson-letter {
+            padding: 20px 15px;
+        }
+        
+        .letter-heading {
+            font-size: 1.3rem;
+        }
+        
+        .memory-box {
+            padding: 20px 15px 20px 45px;
+        }
+        
+        .memory-icon {
+            width: 25px;
+            height: 25px;
+            left: 10px;
+        }
+        
+        .fly-high {
+            font-size: 1.1rem;
+        }
+        
+        .fly-high-icon {
+            font-size: 1.5rem;
+        }
+    }
    
     </style>
 </head>
@@ -5417,59 +5798,7 @@
         </div>
     </section>
 
-    <!-- Scripture Section -->
-    <section id="scripture" class="scripture">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Scripture Reading</h2>
-            <span class="ornament">❧</span>
-            <div class="scripture-container" data-aos="fade-up" data-aos-delay="100">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="scripture-card">
-                            <div class="scripture-header">
-                                <h3>1 Thessalonians 4:13-18 (NKJV)</h3>
-                                <span class="bible-icon"><i class="fas fa-bible"></i></span>
-                            </div>
-                            <div class="scripture-content">
-                                <div class="read-more-content" id="scripture-nkjv">
-                                    <p><span class="verse">13</span> But I do not want you to be ignorant, brethren, concerning those who have fallen asleep, lest you sorrow as others who have no hope.</p>
-                                    <p><span class="verse">14</span> For if we believe that Jesus died and rose again, even so God will bring with Him those who sleep in Jesus.</p>
-                                    <p><span class="verse">15</span> For this we say to you by the word of the Lord, that we who are alive and remain until the coming of the Lord will by no means precede those who are asleep.</p>
-                                    <p><span class="verse">16</span> For the Lord Himself will descend from heaven with a shout, with the voice of an archangel, and with the trumpet of God. And the dead in Christ will rise first.</p>
-                                    <p><span class="verse">17</span> Then we who are alive and remain shall be caught up together with them in the clouds to meet the Lord in the air. And thus we shall always be with the Lord.</p>
-                                    <p><span class="verse">18</span> Therefore comfort one another with these words.</p>
-                                </div>
-                                <span class="read-more-toggle" data-target="scripture-nkjv">
-                                    Read More <i class="fas fa-chevron-down"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="scripture-card">
-                            <div class="scripture-header">
-                                <h3>1 Thessalonians 4:13-18 (NLT)</h3>
-                                <span class="bible-icon"><i class="fas fa-bible"></i></span>
-                            </div>
-                            <div class="scripture-content">
-                                <div class="read-more-content" id="scripture-nlt">
-                                    <p><span class="verse">13</span> And now, dear brothers and sisters, we want you to know what will happen to the believers who have died so you will not grieve like people who have no hope.</p>
-                                    <p><span class="verse">14</span> For since we believe that Jesus died and was raised to life again, we also believe that when Jesus returns, God will bring back with him the believers who have died.</p>
-                                    <p><span class="verse">15</span> We tell you this directly from the Lord: We who are still living when the Lord returns will not meet him ahead of those who have died.</p>
-                                    <p><span class="verse">16</span> For the Lord himself will come down from heaven with a commanding shout, with the voice of the archangel, and with the trumpet call of God. First, the believers who have died will rise from their graves.</p>
-                                    <p><span class="verse">17</span> Then, together with them, we who are still alive and remain on the earth will be caught up in the clouds to meet the Lord in the air. Then we will be with the Lord forever.</p>
-                                    <p><span class="verse">18</span> So encourage each other with these words.</p>
-                                </div>
-                                <span class="read-more-toggle" data-target="scripture-nlt">
-                                    Read More <i class="fas fa-chevron-down"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Gallery Section -->
     <section id="gallery">
@@ -5697,136 +6026,133 @@
 </div>
             
 
-<!-- Children's Tribute Section - Enhanced Aesthetic Design -->
-<div class="tribute-card children-tribute" data-aos="fade-up">
-    <div class="tribute-header">
-        <div class="tribute-header-pattern"></div>
-        <div class="tribute-accent-line"></div>
-        <h3>TRIBUTE BY</h3>
-        <div class="children-title">
-            <h4>CHILDREN</h4>
-        </div>
-        <div class="heart-decoration">
-            <span class="heart-icon"><i class="fas fa-heart"></i></span>
-        </div>
-    </div>
-    
-    <div class="tribute-content">
-        <div class="children-salutation">
-            <p>Our Dearest Mum</p>
+    <!-- Children's Tribute Section  -->
+    <div class="tribute-card children-tribute" data-aos="fade-up">
+        <div class="tribute-header">
+            <div class="tribute-header-pattern"></div>
+            <div class="tribute-accent-line"></div>
+            <h3>TRIBUTE BY</h3>
+            <div class="children-title">
+                <h4>CHILDREN</h4>
+            </div>
+            <div class="heart-decoration">
+                <span class="heart-icon"><i class="fas fa-heart"></i></span>
+            </div>
         </div>
         
-        <div class="children-tribute-text">
-            <div class="read-more-content" id="tribute-children">
-                <p>We struggle to fully understand the impact you had on our lives. You were a source of love, a fierce guardian, and a gentle guide who always steered us towards growth and improvement. Your love was a constant, a warm and comforting presence that shaped who we are.</p>
-                
-                <div class="tribute-divider">
-                    <span class="divider-ornament"><i class="fas fa-dove"></i></span>
-                </div>
-                
-                <p>You influenced us with a desire for all things godly. Never did you miss a church gathering or anything related to ministry. Your relentless love for God is the reason we haven't strayed so far from him. You always made sure we do not put our trust in any other god but Yaweh.</p>
-                
-                <p>You had a strong belief in our potential, always encouraging us to strive for excellence and to stand out in everything we did. You instilled in us a drive to be our best, a confidence that we could achieve anything we set our minds to. Your support was our bedrock, the force that propelled us to move forward in life.</p>
-                
-                <p>Even in your final moments, your thoughts were for us, for the legacy you had so beautifully built. You were still focused on ensuring we continued to succeed, to make our mark wherever we go. This selfless dedication is a testament to the extraordinary woman you were.</p>
-                
-                <div class="tribute-divider">
-                    <span class="divider-ornament"><i class="fas fa-heart"></i></span>
-                </div>
-                
-                <p>But your love extended far beyond the small family. Your heart was so vast, so generous, that you never turned a child away. Your home was a haven, constantly filled with laughter and the happy chatter of children. Every child who crossed your path felt the warmth of your embrace and longed for your presence. You may have given birth to a few, but you nurtured a multitude, becoming a mother figure to so many. Your love for children was a testament to your compassion and your desire to care for all.</p>
-                
-                <div class="tribute-highlight">
-                    <p>We will carry your love, your strength, and your belief in us, and in the potential of every child, in our hearts forever. Your legacy of love, protection, the pursuit of excellence, and your incredible capacity to cater for us all live on through us and through the countless lives you touched.</p>
-                </div>
-                
-                <p>We will strive to make you proud, to continue building upon the foundation you laid with devotion. You may be gone, but your spirit will forever light our paths and the paths of all those you empowered. We love you, Mum, more than words can say. You will be deeply missed, but never forgotten.</p>
-                
-                <div class="scripture-meditation">
-                    <p class="meditation-intro">As we brood on your favorite verse,</p>
-                    <div class="scripture-text">
-                        <p>"He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty."</p>
-                    </div>
-                    <p class="meditation-conclusion">we believe you are resting beautifully in the bosom of our Lord, safe and sound.</p>
-                </div>
-                
-                <p class="final-echo">Your love will echo in the laughter of children for generations to come.</p>
+        <div class="tribute-content">
+            <div class="children-salutation">
+                <p>Our Dearest Mum</p>
             </div>
             
-            <span class="read-more-toggle" data-target="tribute-children">
-                Read Full Tribute <i class="fas fa-chevron-down"></i>
-            </span>
-        </div>
-        
-        <div class="children-memory-frame">
-            <div class="frame-border">
-                <div class="memory-content">
-                    <div class="memory-icon"><i class="fas fa-quote-left"></i></div>
-                    <p>Mum, your arms were always open when we needed a hug. Your heart was always full of love. Your hands were always busy caring for everyone around you. Thank you for being our first teacher, our strongest advocate, and our most devoted friend.</p>
-                    <div class="memory-icon-end"><i class="fas fa-quote-right"></i></div>
+            <div class="children-tribute-text">
+                <div class="read-more-content" id="tribute-children">
+                    <p>We struggle to fully understand the impact you had on our lives. You were a source of love, a fierce guardian, and a gentle guide who always steered us towards growth and improvement. Your love was a constant, a warm and comforting presence that shaped who we are.</p>
+                    
+                    <div class="tribute-divider">
+                        <span class="divider-ornament"><i class="fas fa-dove"></i></span>
+                    </div>
+                    
+                    <p>You influenced us with a desire for all things godly. Never did you miss a church gathering or anything related to ministry. Your relentless love for God is the reason we haven't strayed so far from him. You always made sure we do not put our trust in any other god but Yaweh.</p>
+                    
+                    <p>You had a strong belief in our potential, always encouraging us to strive for excellence and to stand out in everything we did. You instilled in us a drive to be our best, a confidence that we could achieve anything we set our minds to. Your support was our bedrock, the force that propelled us to move forward in life.</p>
+                    
+                    <p>Even in your final moments, your thoughts were for us, for the legacy you had so beautifully built. You were still focused on ensuring we continued to succeed, to make our mark wherever we go. This selfless dedication is a testament to the extraordinary woman you were.</p>
+                    
+                    <div class="tribute-divider">
+                        <span class="divider-ornament"><i class="fas fa-heart"></i></span>
+                    </div>
+                    
+                    <p>But your love extended far beyond the small family. Your heart was so vast, so generous, that you never turned a child away. Your home was a haven, constantly filled with laughter and the happy chatter of children. Every child who crossed your path felt the warmth of your embrace and longed for your presence. You may have given birth to a few, but you nurtured a multitude, becoming a mother figure to so many. Your love for children was a testament to your compassion and your desire to care for all.</p>
+                    
+                    <div class="tribute-highlight">
+                        <p>We will carry your love, your strength, and your belief in us, and in the potential of every child, in our hearts forever. Your legacy of love, protection, the pursuit of excellence, and your incredible capacity to cater for us all live on through us and through the countless lives you touched.</p>
+                    </div>
+                    
+                    <p>We will strive to make you proud, to continue building upon the foundation you laid with devotion. You may be gone, but your spirit will forever light our paths and the paths of all those you empowered. We love you, Mum, more than words can say. You will be deeply missed, but never forgotten.</p>
+                    
+                    <div class="scripture-meditation">
+                        <p class="meditation-intro">As we brood on your favorite verse,</p>
+                        <div class="scripture-text">
+                            <p>"He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty."</p>
+                        </div>
+                        <p class="meditation-conclusion">we believe you are resting beautifully in the bosom of our Lord, safe and sound.</p>
+                    </div>
+                    
+                    <p class="final-echo">Your love will echo in the laughter of children for generations to come.</p>
+                </div>
+                
+                <span class="read-more-toggle" data-target="tribute-children">
+                    Read Full Tribute <i class="fas fa-chevron-down"></i>
+                </span>
+            </div>
+            
+            <div class="children-memory-frame">
+                <div class="frame-border">
+                    <div class="memory-content">
+                        <div class="memory-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>Mum, your arms were always open when we needed a hug. Your heart was always full of love. Your hands were always busy caring for everyone around you. Thank you for being our first teacher, our strongest advocate, and our most devoted friend.</p>
+                        <div class="memory-icon-end"><i class="fas fa-quote-right"></i></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="tribute-signature">
-            <p>With eternal love and gratitude,</p>
-            <p class="signatory">Your Children</p>
-            <div class="children-handprints">
-                <span class="handprint"><i class="fas fa-hand-paper"></i></span>
-                <span class="handprint small"><i class="fas fa-hand-paper"></i></span>
-                <span class="handprint smaller"><i class="fas fa-hand-paper"></i></span>
+            
+            <div class="tribute-signature">
+                <p>With eternal love and gratitude,</p>
+                <p class="signatory">Your Children</p>
+                <div class="children-handprints">
+                    <span class="handprint"><i class="fas fa-hand-paper"></i></span>
+                    <span class="handprint small"><i class="fas fa-hand-paper"></i></span>
+                    <span class="handprint smaller"><i class="fas fa-hand-paper"></i></span>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-       
+        
 
-            <!-- Grandson's Tribute -->
-            <div class="tribute-card grandson-tribute" data-aos="fade-up">
-                <div class="tribute-header">
-                    <div class="tribute-header-pattern"></div>
-                    <h3>TRIBUTE BY GRANDCHILDREN</h3>
-                    <div class="grandson-hearts">
-                        <i class="fas fa-heart"></i>
-                        <i class="fas fa-heart"></i>
-                        <i class="fas fa-heart"></i>
-                    </div>
-                </div>
-                <div class="tribute-content">
-                    <div class="grandson-letter">
-                        <div class="letter-heading">Dear Grandma,</div>
-                        
-                        <div class="read-more-content" id="tribute-grandson">
-                            <p>It's hard for us to believe that you're really gone. You were a kind and selfless person and you inspired us both. This has been a massive loss for us.</p>
+    <!-- Grandchildren's Tribute Section -->
+    <div class="tribute-card grandson-tribute" data-aos="fade-up">
+        <div class="tribute-header">
+            <div class="tribute-header-pattern"></div>
+            <h3>TRIBUTE BY GRANDCHILDREN</h3>
+            <div class="grandson-hearts">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        
+        <div class="tribute-content">
+            <div class="grandson-letter">
+                <div class="letter-heading">Dear Grandma,</div>
+                
+                <div class="read-more-content" id="tribute-grandson">
+                    <div class="grandchildren-columns">
+                        <div class="column-left">
+                            <p>It's hard for us to believe that you're really gone. You were a kind and selfless person and you inspired us all. This has been a massive loss for us.</p>
                             
-                            <p>Even though we saw you in person a few times, your impact was evident everywhere in our family. I saw you in the life of my mum, in how she spoke about you and how she lived. And when we did see you, your infectious energy shone brightly.</p>
+                            <p>Even though we saw you in person a few times, your impact was evident everywhere in our family. We saw you in the life of our mum, in how you were spoken of and how you lived. And when we did see you, your infectious energy shone brightly.</p>
+                            
+                            <p>You were the glue that held everything together, and it was clear how much everyone loved you. We remember how we would see photos of you dancing in church on Facebook, saying 'look at Grandma'; and it breaks our hearts that we'll never see you dance ever again. We will miss you so so much and we hope to make you proud.</p>
                             
                             <div class="memory-box">
-                                <div class="memory-icon"><i class="fas fa-home"></i></div>
-                                <p>Staying at your house when we visited Ghana was such a fun experience. You were the glue that held everything together, and it was clear how much everyone loved you.</p>
+                                <div class="memory-icon"><i class="fas fa-store"></i></div>
+                                <p>Grandma, there were a lot of memories that we had of you but our favorite one was when you took us to the gas station for the first time. We loved it so much that when we left there, we would call you everyday and ask you how much we made at the gas station that day. We'll miss all of our calls on the phone, always telling us to study hard and make you proud.</p>
                             </div>
-                            
-                            <p>I remember how mum would always show us the photos of you dancing in church on Facebook, saying 'look at your grandma', and it breaks my heart that I'll never see you dance ever again. I will miss you so so much and I hope to make you proud.</p>
-                            
-                            <div class="memory-box gas-station-memory">
-                                <div class="memory-title">My Favorite Memory</div>
-                                <p>There are a lot of memories that we had when we went to Ghana but my favourite memory about you was when you took me to the gas station for the first time. I loved it so much that when we left Ghana, I would call grandma every day and ask her how much we made at the gas station each day.</p>
-                            </div>
-                            
-                            <p>I'll miss all of our calls on the phone, you always telling me to study hard and make you proud.</p>
-                            
+                        </div>
+                        
+                        <div class="column-right">
                             <div class="scripture-box">
                                 <div class="scripture-icon"><i class="fas fa-bible"></i></div>
                                 <div class="scripture-content">
-                                    <div class="scripture-title">A reading from 1 Thessalonians:</div>
-                                    <p>"Brothers and sisters, we do not want you to be uninformed about those who sleep in death, so that you do not grieve like the rest of mankind, who have no hope. For we believe that Jesus died and rose again, and so we believe that God will bring with Jesus those who have fallen asleep in him."</p>
+                                    <div class="scripture-title">A reading from 1 Thessalonians 13-14:</div>
+                                    <p>"Brothers and sisters, we do not want you to be uninformed about those who sleep in death, so that you do not grieve like the rest of mankind, who have no hope. For we believe that Jesus died and rose again, and so we believe that God will bring with Jesus those who have fallen asleep in Him."</p>
+                                    <p class="scripture-meaning">This verse tells us that although we have lost our beloved grandma, she is now in the hands of God.</p>
                                 </div>
                             </div>
                             
-                            <p>These verses tell us that although we have lost our beloved grandma, she is now in the hands of God and it is well with her soul. She is now resting free from all suffering and pain.</p>
-                            
-                            <p class="farewell">We will miss you Grandma and we will see you again the day the Lord has planned for us. But for now it's Goodbye. Rest in heavenly peace.</p>
+                            <p>She is now resting free from all pain and suffering. We will miss you Grandma and we will see you again on the day the Lord has planned for us, but for now it's Goodbye. Rest in heavenly peace.</p>
                             
                             <div class="fly-high">
                                 <p>Fly high Grandma.</p>
@@ -5836,22 +6162,25 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <span class="read-more-toggle" data-target="tribute-grandson">
-                            Read Full Tribute <i class="fas fa-chevron-down"></i>
-                        </span>
-                    </div>
-                    
-                    <div class="tribute-signature">
-                        <p>With love from your grandchilderen, Michelle & Josh</p>
                     </div>
                 </div>
+                
+                <span class="read-more-toggle" data-target="tribute-grandson">
+                    Read Full Tribute <i class="fas fa-chevron-down"></i>
+                </span>
             </div>
+            
+            <div class="grandson-tribute .tribute-signature">
+                <p>With love from,</p>
+                <p class="signatory">Your Grandchildren</p>
+            </div>
+        </div>
+    </div>
 
         
             <div class="tribute-card" data-aos="fade-up">
                 <div class="tribute-header">
-                    <h3>TRIBUTE BY PS. BENE ON BEHALF OF ELIM CITY</h3>
+                    <h3>TRIBUTE BY ELIM CITY</h3>
                     <div class="quote-icon">
                         <i class="fas fa-quote-left"></i>
                     </div>
@@ -6080,76 +6409,7 @@
     </div>
 </div>
 
-            <!-- Childhood Friend & Colleague Tribute -->
-            <div class="tribute-card friend-tribute" data-aos="fade-up">
-                <div class="tribute-header">
-                    <div class="friend-tribute-pattern"></div>
-                    <span class="tribute-icon">
-                        <i class="fas fa-handshake"></i>
-                    </span>
-                    <h3>TRIBUTE BY CLEMENT DANSO TANDOH</h3>
-                    <p class="tribute-relationship">Childhood friend and work colleague</p>
-                </div>
-                
-                <div class="tribute-content">
-                    <div class="friend-tribute-intro">
-                        <p>It is with great sadness, yet incredible honour that I write this tribute for our sister, our colleague, our friend Rev Mrs Lucy Perbi-Nyarko.</p>
-                    </div>
-                    
-                    <div class="scripture-verse">
-                        <div class="verse-quote">"I am the resurrection and the life. He who believes in Me though he may die, he shall live. And whoever lives and believes in Me shall never die"</div>
-                        <div class="verse-reference">— John 11:25-26</div>
-                    </div>
-                    
-                    <div class="read-more-content" id="tribute-friend">
-                        <p>Our dear Pastor and Sister Lucy, we are thankful to God for your life. You were so loving, caring and true to be with. As we grew up through our youthful years, we remember the fun and laughter which will always remain in our hearts. The memories we created together will last forever.</p>
-                        
-                        <p>Today, family members, friends and loved ones have gathered to pay our last respect to a unique and virtuous lady Pastor Mrs Lucy Perbi Nyarko. Your tragic passing was a shock beyond imagination.</p>
-                        
-                        <div class="tribute-memory-accent">
-                            <div class="memory-line"></div>
-                            <p>Crosby, Eugene, Rhoda and I were at the hospital when the doctor informed us that you were nearing the end of life. In that moment, my world stood still.</p>
-                            <div class="memory-line"></div>
-                        </div>
-                        
-                        <p>Death has led us to ask the doctors "what is meant by nearing the end of life" what is life truly worth? Today we find it so hard to bid you farewell to a devoted mother, diligent sister, compassionate woman and a people's person. We ask ourselves, what does farewell mean if not death. But will death itself be farewell? How profound is that tragedy that has engulfed us?</p>
-                        
-                        <div class="tribute-qualities">
-                            <span>Loving</span>
-                            <span>Caring</span>
-                            <span>Devoted</span>
-                            <span>Diligent</span>
-                            <span>Compassionate</span>
-                            <span>Virtuous</span>
-                        </div>
-                        
-                        <p>Now, for the first time in our lives, we didn't have you, Rev Mrs Lucy to turn to. The pain we feel for you is deep.</p>
-                        
-                        <p>There is a void that we struggle to fill, emptiness in our family. We shall remain closer than close. May your soul rest in peace with your maker, you have done what you came to do here on earth. Your demise came suddenly but your maker understands.</p>
-                        
-                        <div class="farewell-container">
-                            <div class="farewell-ornament">❦</div>
-                            <div class="farewell-message">
-                                <p>We wish you safe journey into eternity.</p>
-                                <p>Fare thee well Afia Lucy.</p>
-                                <p>May your Ladyship soul rest in peace.</p>
-                                <p>Continue to smile with angels until the trumpet sounds and we meet again. Amen.</p>
-                            </div>
-                            <div class="farewell-ornament">❦</div>
-                        </div>
-                    </div>
-                    
-                    <span class="read-more-toggle" data-target="tribute-friend">
-                        Read Full Tribute <i class="fas fa-chevron-down"></i>
-                    </span>
-                    
-                    <div class="tribute-signature">
-                        <div class="signature-line"></div>
-                        <p>With deep sorrow and fond memories,</p>
-                        <p class="signatory">Clement Danso Tandoh</p>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </section>
 
@@ -6178,6 +6438,11 @@
         <a href="#donation" class="floating-donation-button" title="Support the Family">
             <span class="donation-icon"><i class="fas fa-heart"></i></span>
             <span class="donation-text">Donate</span>
+        </a>
+        <!-- PDF Brochure button (new) -->
+        <a href="memorial-brochure.pdf" class="floating-button brochure-button" title="Download Memorial Brochure" target="_blank">
+            <span class="button-icon"><i class="fas fa-file-pdf"></i></span>
+            <span class="button-text">Brochure</span>
         </a>
     </div>
 
